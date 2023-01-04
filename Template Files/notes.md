@@ -1,0 +1,29 @@
+//Creating Elements in JS
+//<html>
+    <head>
+    </head>
+    <body>
+        <ul id="my-list">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+        </ul>
+        
+        <script src="index.js"></script>
+    </body>
+</html>//
+<html>
+    <head>
+    </head>
+    <body>
+        <ul id="my-list">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+        </ul>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
+
+
