@@ -40,7 +40,7 @@ function myFunction(DJOrange){
     console.log("Scrolling up orange!");
 }
 
-document.getElementById("DJOrange").addEventListener('scroll', function(color= orange){
+document.getElementById("DJOrange").addEventListener('wheel', function(color= orange){
     console.log("Scrolling stroll for orange!");
 
 })
