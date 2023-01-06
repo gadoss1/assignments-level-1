@@ -1,9 +1,16 @@
 // DJ-JS-Assignment //
 
 // Draw square
-rectMode(CENTER)
-const size = width * 0.3;
-rect(width/50, height/50, size, size);
+function setup(){
+    createCanvas (200, 100);
+}
+
+function draw (){
+    background(500, 400);
+    rectMode(CENTER);
+    rect(30, 20, 55, 55);
+}
+
 
 document.body.style.textAlign = "center";
 document.body.style.backgroundColor = "gray";
