@@ -1,4 +1,12 @@
-//DJ-JS-Assignment
+// DJ-JS-Assignment //
+
+// Draw square
+rectMode(CENTER)
+const size = width * 0.3;
+rect(width/50, height/50, size, size);
+
+document.body.style.textAlign = "center";
+document.body.style.backgroundColor = "gray";
 
 function myFunction(DJBlue){
     console.log("They changed to blue!");
@@ -40,7 +48,7 @@ function myFunction(DJOrange){
     console.log("Scrolling up orange!");
 }
 
-document.getElementById("DJOrange").addEventListener('wheel', function(color= orange){
+document.getElementById("DJOrange").addEventListener('onMouseWheel', function(color= orange){
     console.log("Scrolling stroll for orange!");
 
 })
