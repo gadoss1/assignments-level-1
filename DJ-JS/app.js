@@ -2,6 +2,8 @@
 
 const square = document.querySelector(".square");
 
+document.body.style.backgroundColor = "grey";
+
 square.addEventListener("mouseover", function(){
     square.style.backgroundColor= "turquoise";
     console.log ("Back to original");
