@@ -1,5 +1,40 @@
 */Style CSS File for JS DJ/
 
-{box-sizing: 50px;
- box-align: center;
+body {
+    background-color:black;
 }
+
+h1 {
+    font-family: cursive;
+    font-size: 70px;
+    font-weight: 500;
+    color: cornflowerblue;
+}
+
+p {
+    font-family: Georgia;
+    font-size: 30px;
+    color: slateblue;
+
+}
+.square{
+    width: 100px;
+    height: 100px;
+    background: turquoise;
+}
+
+h2 {
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 500;
+    color: goldenrod;
+}
+
+h3 {
+    font-family: Lucinda;
+    font-size: 15px;
+    font-weight: 500;
+    color: gold;
+}
+
+
