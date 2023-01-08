@@ -8,8 +8,13 @@ h1.style.color = "gold";
 
 document.getElementById("header").appendChild(h1);
 
-//document.createElement = "div";
-//subTitle.innerHTML = '<span class="name">Greg wrote the JavaScript</span>';
+const div1 = document.createElement ("div");
+
+div1.className = "subTitle";
+
+document.getElementById("h1").appendChild("div1");
+
+subTitle.innerHTML = '<span class="name">Greg Doss wrote the JavaScript</span>';
 
 const messages = document.getElementsByClassName("message");
 
