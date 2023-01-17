@@ -8,13 +8,11 @@ h1.style.color = "gold";
 
 document.getElementById("header").appendChild(h1);
 
-document.getElementById("h1");
+document.getElementById("h2");
 
 document.body.innerHTML += '<span class="name">Greg Doss</span>wrote the JavaScript!';
 
-document.getElementByClass("name").style.textAlign = "center";
-
-document.getElementById("h1").appendChild(subTitle);
+document.getElementById("h2").appendChild(subTitle);
 
 const messages = document.getElementsByClassName("message");
 
@@ -25,8 +23,6 @@ messages[3].textContent = "you're great";
 messages[4].textContent = "you're awesome!";
 messages[5].textContent = "no, you're awesome!";
 
-document.getElementsById("clear-button");
-clear-button.addEventListner("click", function(){
-    messages.textContent = "Redacted";
-})
-
+document.getElementById('clear-button').addEventListener('click', () => {
+    messages.textContent = '';
+});
