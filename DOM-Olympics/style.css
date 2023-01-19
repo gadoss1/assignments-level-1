@@ -5,15 +5,18 @@
 }
 
 .theme-one{
-    color:blue/brown;
+    background-color:blue/brown;
 }
 
 .theme-two{
-    color: red/black;
+    background-color: red/black;
 }
 
 .name {
-    color: plum;
+    color: blueviolet;
+    font-weight: bold;
+    font-style: underline;
+    font-size: larger;
 }
 
 .messages {

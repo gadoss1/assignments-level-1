@@ -8,21 +8,33 @@ h1.style.color = "gold";
 
 document.getElementById("header").appendChild(h1);
 
-document.getElementById("h2");
+document.body.innerHTML += '<span class="name">Greg Doss</span> wrote the JavaScript!';
 
-document.body.innerHTML += '<span class="name">Greg Doss</span>wrote the JavaScript!';
+document.getElementById("subtitle").append("Hi");
 
-document.getElementById("h2").appendChild(subTitle);
+const messenger = document.getElementsByClassName("messages");
+console.log(messages);
 
-const messages = document.getElementsByClassName("message");
+var messageReplace = [
+    "you're great",
+    "thanks!",
+    "you're welcome",
+    "you're great",
+    "you're awesome!",
+    "no, you're awesome!",
+];
 
-messages[0].textContent = "you're great";
-messages[1].textContent = "thanks!";
-messages[2].textContent = "you're welcome";
-messages[3].textContent = "you're great";
-messages[4].textContent = "you're awesome!";
-messages[5].textContent = "no, you're awesome!";
+for (var i = 0; i < messages.length; i++) {
+    var newMessages = document.createElement("array");
+    messages.textContent = newMessages[i];
+    messageReplace.append(newMessages);
+};
 
-document.getElementById('clear-button').addEventListener('click', () => {
-    messages.textContent = '';
-});
+//messages.innerHTML += "<array>" + messageList[i] + "</array>"
+
+//document.getElementById('clear-out').addEventListener('click', () => {
+    //messages.textContent = '';
+//});
+
+//theme.classList.toggle("theme-two");
+//document.body.addEventListener("change", theme-two);
