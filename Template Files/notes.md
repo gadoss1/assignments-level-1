@@ -495,8 +495,498 @@ document.getElementById("submit-button").addEventListener("click", function() {
 
 ------------------------------------------------------------------------------------------------
 
+//Arrow Functions
 
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1 id="clickable">click me</h1>
+        <script src="index.pack.js"></script>
+    </body>
+</html>
 
+const h1 = document.getElementById("clickable")
+h1.addEventListener("click", () => {
+    h1.textContent = "clicked"    
+})
+
+const birds = ["robin", "pelican", "goose"]
+
+const bigBirds = birds.map(bird => "big " + bird)
+
+function addTwo(first, second){
+    return first + second
+}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1 id="clickable">click me</h1>
+        <script src="index.pack.js"></script>
+    </body>
+</html>
+
+---------------------------------------------------
+
+//Forms Parts 1 & 2
+
+# **Basic tags and attributes**
+
+### **Tags**
+
+---
+
+The HTML `<form>` element defines a form that is used to collect user input:
+
+```
+<form></-- input tags and variations of input tags --></form>
+```
+
+`<form>` wraps all your inputs.
+
+A simple form in HTML would look like:
+
+```
+<form>
+    First Name: <input/></from>
+```
+
+And look like this in the browser:
+
+First Name:  ___
+It is wise to give each of your forms a `name` attribute.
+`<form name="user-info">`
+****Attributes****
+There's many different kinds of input fields, and most of them still use the `<input/>` tag, but can be used by giving `<input/>` different **attributes**.
+The big one is `type`
+`type` defaults to `text`. So our "First Name" input box is already `<input type="text"/>`
+There are many other types, and we'll talk about most of them in Part 2. You should be excited for that.
+The different types gives the input boxes cool tools to help your user give the type of input.
+For example:
+Number restricts the inputs to numbers, and give you up and down arrows to increment or decrement it.Number:  ___
+Number also has more attributes to help you control how the input box behaves.
+For `type="number"` the common ones are: min, max, step
+Min and max are exactly what the sound like. They restrict the minimum and the maximum value of the input box.
+Step controls how much the up and down arrow move our number. Play around with this input box `Number: <input step="10" type="number"/>`:Number:  ___
+Your step can also be decimals.
+Here is a list of just some of the other attributes you can give your input box:
+• `name` - Important for naming and using your input boxes. Similar to `id`
+• `value` - Value gives your input and initial value
+• `placeholder` - Placeholder gives your user an example or hint of what belongs in an input box
+• `required` - From will not submit if you have this attribute in an empty input box
+Many of these attributes are using by your browser to help with autofill. Especially the `name` attribute. If you say `name="firstname"`, Chrome can autofill that for your user.
+****Using JavaScript to get values from your form****
+Because JavaScript is JavaScript and HTML is HTML there are many different ways to get the value from an input box.
+**By id**
+The strategies that we will go over now are:
+• With the `id` attribute of the input box
+• With the `name` attribute of the form, and the `name` attribute of the input box
+We know that we can select anything in our HTML (more accurately the DOM) with the `id`:
+
+`<div id="first-name">Georgette</div>`
+
+`document.getElementById("first-name")`
+
+Once we've selected that element, we can look at it's attributes. Using the above example:
+
+`document.getElementById("first-name").innerHTML //=> Georgette`
+
+We can do this same sort of thing with `.value`. We are going to select the input box by it's id and then get the value from it.
+
+`<input id="first-name"/>`
+
+`document.getElementById("first-name").value`
+
+**By name**Any form that we've named becomes part of the document. So we can select this form:
+
+`<form name="info"><input name="age"/></form>`
+as easily as:
+
+`document.info`
+
+and any input in that form as easily as:
+
+`document.info.age`
+
+and it's value like so:
+
+`document.info.age.value`
+
+****Example****
+Follow along as we create a little mad lib game. If you haven't played mad libs before, we will have the user pick a noun and a verb and put those into a potentially silly sentence.
+First, our HTML form. It will have an input for a noun, a verb, and an adjective.
+
+`<form name="words"><input name="noun" placeholder="noun"/><input name="adverb" placeholder="adverbe"/><input name="verb" placeholder="verb"/></form>`
+We would love to be able to grab the values from each of those input boxes and then print our silly sentence. Let's `alert()` it now, for simplicity.
+It would be nice if we could just:
+
+`var noun = document.words.noun.value
+var adverb = document.words.adverb.value
+var verb = document.words.verb.value
+
+alert("The " + noun + " did " + adverb + " " + verb + " in it's home")`
+
+But, if you try this out, the alert happens right away and all these variables are empty strings. This is because we haven't given our user any time to type in their response.
+The appropriate user experience should be: they type their response, and then click a button.
+For that, we'll add a button to our HTML and some event listener stuff.
+
+`<form name="words"><input name="noun" placeholder="noun"/><input name="adverb" placeholder="adverb"/><input name="verb" placeholder="verb"/><button>Submit</button></form>`
+
+`document.words.addEventListener("submit", function(e){
+  e.preventDefault()
+
+  var noun = document.words.noun.value
+  var adverb = document.words.adverb.value
+  var verb = document.words.verb.value
+
+  alert("The " + noun + " did" + adverb + " " + verb + " in it's home")
+})`
+
+Concerning the button, the submit event, the event object, and `event.preventDefault()`, a very brief explanation:
+A button in a form defaults to that forms submit button. Web developers use to `submit` forms and refresh the page by default. This is archaic and dumb, and now we overwrite that functionality with `event.preventDefault()` using the event object itself.
+The submit stuff it nice for the user, because they can submit a form with the `Enter` key.
+There is tons of other cool stuff you can do with forms.
+
+The standard way to take user input using HTML and Javascript is by using the input HTML element.  
+The HTML form element can be wrapped around a group of inputs to create a form the user can type in and submit, such as a login or signup form on a website.
+
+The "submit" event is used on forms as it allows the user to either click the submit button or press "enter" to submit the information.
+
+Submit events refresh the website by default, so this needs to prevented as soon as the submit event occurs to maintain the information.
+
+//HTML File Example
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        
+        <h1> Forms Part 1 </h1>
+        
+        <form name="my-form"> 
+            <input type="text" name="firstName"/>
+            <input type="text" name="lastName"/>
+            <button>Submit</button>
+        </form>
+        
+        
+        <script src="index.js"></script>
+    </body>
+</html>
+
+//JS File Example
+const form = document["my-form"]
+
+// Submit event
+
+form.addEventListener("submit", function(event){
+    event.preventDefault()
+    
+    const firstName = form.firstName.value
+    const lastName = form.lastName.value
+    form.firstName.value = ""
+    form.lastName.value = ""
+    
+    // 1 . <h1></h1>
+    const h1 = document.createElement('h1')
+    // 2. <h1>Harry Potter</h1>
+    h1.textContent = firstName + " " + lastName
+    // 3. Append
+    document.getElementsByTagName("body")[0].append(h1)
+})
+
+// Submit event
+
+form.addEventListener("submit", function(event){
+    event.preventDefault()
+    
+    
+})
+
+Part 2 is the fun part. We get to explore all the cushy things our browser has built for us, and all we have to do is simply implement them.
+
+---
+
+### **Input types**
+
+---
+
+Let start with the different input types. The first two are old news.
+
+- text
+- number
+- checkbox
+- radio
+- tel
+- email
+- date
+- search
+- color
+
+Some of these will appear to do nothing, but there's some handy things they do for us. For example, different key boards will pop up on your users phone for `type="email"` and for `type="tel"`.
+
+Not only that, but these attributes could be useful for form validation later on down the road.
+
+`type="search"` may seem like it doesn't do anything, but remember, a browser may choose to do a number of cool things to any input type if it wished. Like maybe adding a little magnifying glass, or an `x` to clear a search input field.
+
+The rest of these types have pretty big and cool features.
+
+---
+
+Date gives the user a calendar to pick a date from:
+
+---
+
+Color give the user a sweet color picker to choose a color from:
+
+---
+
+# **Radio and Checkbox**
+
+---
+
+Radio Buttons (circles) only allow ther user to select one of the options.
+
+Checkboxes (squares) mean the user can pick as many of the options as they want.
+
+```
+<form><p>I like:</p><br><label><input type="checkbox"/>Cats</label><br><label><input type="checkbox"/>Dogs</label><br><label><input type="checkbox"/>Unicorns</label><br>
+    But my favorite is:
+    <br>
+    Dogs <input type="radio" name="favorite"/>
+    Cats <input type="radio" name="favorite"/>
+    Unicorns <input type="radio" name="favorite"/></form>
+```
+
+---
+
+The `name` and `value` attribute are especially important with radio buttons and check boxes.
+
+All buttons and boxes that are in the same grouping will be given the same `name`.
+
+The value of each input box will be the desired `.value` for radio buttons. Usually just what the user is selecting:
+
+```
+<form name="animals">
+    I like:
+    <br>
+    Cats <input value="cats" name="likes" type="checkbox"/>
+    Dogs <input value="dogs" name="likes" type="checkbox"/>
+    Unicorns <input value="unicorns" name="likes" type="checkbox"/><br>
+    But my favorite is:
+    <br>
+    Dogs <input value="cats" type="radio" name="favorite"/>
+    Cats <input value="dogs" type="radio" name="favorite"/>
+    Unicorns <input value="unicorns" type="radio" name="favorite"/><button>submit</button></form>
+```
+
+To get the value of the radio button the user selected, you can use the `name` attribute and the DOM gets a new property to the form!:
+
+```
+document.animals.favorite.value //=>  "cats"
+
+```
+
+To get the checkboxes that the user selected? That's it's own beast.
+
+```
+Cats <input value="cats" name="likes" type="checkbox"/>
+Dogs <input value="dogs" name="likes" type="checkbox"/>
+
+```
+
+What would `document.animals.likes.value` look like?
+
+It's not just going to be a string, because it can be multiple options that are selected. It's actually undefined.
+
+There are a few methods you can use to get which check boxes are check.
+
+If you select the input box, either by name or id, you can looked at it's `.checked` property.
+
+In this way, you could see wether or not a checkbox was checked.
+
+You could also get at the list of checkboxes, loop through them, and make another array of just the values of all the checked ones.
+
+Special note: `document.animals.likes` is kind of an array, but it's more accuratly a "node list".
+
+```
+document.animals.addEventListener("submit", function(e){
+  e.preventDefault()
+  //assign our animals that are liked to a variable
+  var animals = document.animals.likes
+  //create a new array that we can fill with the values (as strings) of our checkboxes
+  var checkedAnimals = []
+  //loop through each checkbox
+  for (var i = 0; i < animals.likes.length; i++){
+    //check to see if the checkbox is checked
+    if(animals[i].checked){
+      //add the values to our new array
+      checkedAnimals.push(animals[i].value)
+    }
+  }
+  console.log(checkedAnimals)
+})
+
+```
+
+Things got heavy there at the end, but for the most part, working with forms is great. Start practicing!
+
+# **An easier way to get array of values from checkboxes**
+
+Fortunately, there's a slightly easier alternative we can use to get the list of checked items using `document.querySelectorAll`:
+
+  //Required Text
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        
+        <form>
+            <input type="text" placeholder="First Name" required/>
+            <button>Submit</button>
+        </form>
+        
+        
+        
+        <script src="index.js"></script>
+    </body>
+</html>
+
+  //Radios
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        
+        <form name="myForm">
+            Male:   <input type="radio" name="gender" value="Male"/>
+            Female: <input type="radio" name="gender" value="Female"/>
+            <button>Submit</button>
+        </form>
+        
+        
+        
+        <script src="index.js"></script>
+    </body>
+</html>
+
+const form = document.myForm
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+    
+    console.log(form.gender.value)
+})
+
+  //Checkboxes
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        
+        <form name="myForm">
+            Male:   <input type="radio" name="gender" value="Male"/>
+            Female: <input type="radio" name="gender" value="Female"/>
+            
+            Which are your favorite? Select all that apply:
+            Movies: <input type="checkbox" value="Movies" name="entertainment"/>
+            Games: <input type="checkbox" value="Games" name="entertainment"/>
+            <button>Submit</button>
+        </form>
+        
+        
+        
+        <script src="index.js"></script>
+    </body>
+</html>
+
+const form = document.myForm
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+    
+    // console.log(form.gender.value)
+    
+    // console.log(form.entertainment)
+    
+    const checkedInputs = []
+    
+    for(let i = 0; i < form.entertainment.length; i++){
+        if(form.entertainment[i].checked){
+            checkedInputs.push(form.entertainment[i].value)
+        }
+    }
+    
+    console.log(checkedInputs)
+})
+
+  //Options
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        
+        <form name="myForm">
+            Male:   <input type="radio" name="gender" value="Male"/>
+            Female: <input type="radio" name="gender" value="Female"/>
+            
+            Which are your favorite? Select all that apply:
+            Movies: <input type="checkbox" value="Movies" name="entertainment"/>
+            Games: <input type="checkbox" value="Games" name="entertainment"/>
+            
+            <select name="city">
+                <option value="Paris">Paris</option>
+                <option value="New York">New York</option>
+                <option value="Chicago">Chicago</option>
+            </select>
+            
+            
+            <button>Submit</button>
+        </form>
+        
+        
+        
+        <script src="index.js"></script>
+    </body>
+</html>
+
+const form = document.myForm
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+    
+    // Radio Inputs
+    // console.log(form.gender.value)
+    
+    
+    // Checkbox Inputs
+    // console.log(form.entertainment)
+    
+    // const checkedInputs = []
+    
+    // for(let i = 0; i < form.entertainment.length; i++){
+    //     if(form.entertainment[i].checked){
+    //         checkedInputs.push(form.entertainment[i].value)
+    //     }
+    // }
+    
+    // console.log(checkedInputs)
+    
+    
+    // Select Option inputs
+    
+    console.log(form.city.value)
+    
+    
+})
 
 
 
