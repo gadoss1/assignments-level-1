@@ -52,43 +52,14 @@ To break down creating a new list item:
 
 Most importantly, take this assignment to reach out to find a friend to keep pace with in V School. You can ask for help on this assignment or offer help on the other DOM assignments.
 
+// Possible syntax example to change text upon save button click in edit function
+Name:<br><br>
+<input type="text" id="name" name="name">
+<br><br>
+<button onclick="change_text()">Submit</button>
 
-let addButton = document.getElementById("add-item");
-
-addButton.addEventListener("click", function () {
-    
-    // Retrieves the 'list'
-    let list = document.getElementById("items");
-    let textNode = window.prompt("Enter item:");
-    if (textNode != null) {
-        let item = document.createElement("li");
-        //Creates a textnode from the users input
-        item.appendChild(document.createTextNode(textNode));
-        //Adds the users textnode at the end of the list
-        list.appendChild(item);
-        // Creates a delete button 
-        let deleteButton = document.createElement("span");
-        deleteButton.innerHTML = "Delete"
-        item.appendChild(deleteButton)
-    }
-});
-
-form.addEventListener("delete", function(event){
-    event.preventDefault();
-        const list = list.removeElement(il);
-        document.getElementsByTagName("list")[i].remove(il);
-    })
-
-
-//save button upon edit changes
-    editButton.addEventListener("click", () => {
-        newDiv.innerHTML += "<input name = 'newInput'/><button id = 'save'>save</button>;
-        
-        let saveButton = document.getElementById("save-button");
-
-        saveButton.addEventListener("click", () => {
-            let updatedDiv = document.createElement("div");
-            updatedDiv.textContent = newDiv;
-        })
-        
-})
+<script>
+function change_text(){
+    var name = document.getElementById("name").value;
+    document.getElementById("demo").innerHTML = "Hello " + name;
+}

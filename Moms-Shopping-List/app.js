@@ -38,9 +38,10 @@ form.addEventListener("submit", function(event) {
         
         let saveButton = document.getElementById("save-button");
         
+        // Text changed upon clicking save button for edit input box
         saveButton.addEventListener("click", () => {
             let updatedDiv = document.createElement("div");
-            updatedDiv.textContent = newDiv;
+            updatedDiv.textContent = "";
             input.oninput = function () {
                 li.innerHTML = input.value;
             };
