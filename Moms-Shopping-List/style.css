@@ -24,6 +24,9 @@
 
 .label {
     margin: 10px;
+    font-weight: bold;
+    font-family: cursive;
+    color: saddlebrown;
 }
 
 #list {
@@ -39,4 +42,8 @@
 #list div {
     margin-bottom: 10px;
     text-align: center;
+}
+
+body{
+    background-color: blueviolet;
 }
