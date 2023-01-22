@@ -15,6 +15,7 @@ form.addEventListener("submit", function(event) {
     
     //Add new item to list
     newDiv.textContent = userInput;
+    newDiv.id = 'div'
     editButton.textContent = "edit";
     clearsButton.textContent = "X",
     clearsButton.style.marginLeft = "5px";
@@ -34,17 +35,20 @@ form.addEventListener("submit", function(event) {
 
     // Save button upon edit input changes
     editButton.addEventListener("click", () => {
-        newDiv.innerHTML += "<input name = 'newInput'/><button id = 'save'>save</button>";
+        newDiv.innerHTML += "<input name = 'newInput' id='newInput'/><button id = 'save-button'>save</button>";
         
         let saveButton = document.getElementById("save-button");
         
+
         // Text changed upon clicking save button for edit input box
         saveButton.addEventListener("click", () => {
+            event.preventDefault();
+            const newInput = document.getElementById("newInput");
+            let oldDiv = document.getElementById('div')
             let updatedDiv = document.createElement("div");
-            updatedDiv.textContent = "";
-            input.oninput = function () {
-                li.innerHTML = input.value;
-            };
-        })
-    }) 
+            console.log(newInput)
+            oldDiv.textContent = newInput.value;
+            
+        });
+    });
 })
