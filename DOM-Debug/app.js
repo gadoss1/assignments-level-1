@@ -1,8 +1,8 @@
 const colors = ["red", "blue", "green"];
 const list = document.getElementById("list");
 
-form.addEventListener("click", function() {
-    //event.preventDefault();
+form.addEventListener("click", function(event) {
+    event.preventDefault();
     
     const userInput = add.value;
     let newLi = document.createElement("li");
@@ -16,6 +16,24 @@ form.addEventListener("click", function() {
         newLi.append(newDiv);
 
 })
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const userInput = form.title.value;
+    form.title.value = "";
+    let newLi = document.createElement("li");
+    let newDiv = document.createElement("div");
+    
+    //Add new item to list
+    newDiv.textContent = userInput;
+    newDiv.id = 'div';
+
+    list.append(newLi);
+    list.insertBefore(newLi, hr);
+    newLi.append(newDiv);
+    newLi.append(editButton);
+    newLi.append(clearsButton);
 
 document.getElementById("add").addEventListener("onclick", function(e){
     const subItem = createSubItem(e);

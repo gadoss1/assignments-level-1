@@ -8,12 +8,20 @@
     <title>DOM Debug</title>
 </head>
 <body>
-    <div class="main" data-level="0">
-        <input id="input"/>
+    <form name="addList" id="addText">
+        <label class="label" for="title">Item name</label>
+        <input class="input" name="title" id="title" />
         <button id="add">Add new item</button>
-        <div id="list">
+    </form>
 
+    <div class="main" data-level="0">
+        <div class="title-bar">
+            <h1 class="title">Item List</h3>
         </div>
+        <hr>
+        <ul id="list">  
+        <hr>              
+        </ul>
     </div>
     <script src="app.js"></script>
 </body>

@@ -1,47 +1,64 @@
+// Qualifier //
+
 // Access the header element and add the required text
-let header = document.getElementById("header")
-header.innerHTML = "JavaScript made this!!<br><span>Troy</span> wrote this JavaScript"; 
+document.getElementById("header").style.textAlign = "center"
+document.getElementById("header").style.fontSize = "50px"
+let header = document.getElementById("header");
+header.innerHTML = "JavaScript made this!!";
+let topHeader = document.querySelector("header#header");
+topHeader.innerHTML += "</br><span id='firstSpan'> Greg Doss </span><span id='secondSpan'>made this JavaScript!</span>"
+document.getElementById("firstSpan").style.color = "gold";
+document.getElementById("firstSpan").style.fontSize = "30px";
+document.getElementById("secondSpan").style.fontSize = "30px";
+body.style.color = "black";
 
-// Add the CSS style classes
-document.querySelector("#header").classList.add("header");
-document.querySelector("span").classList.add("name");
+// Bronze level //
 
-// variable for the messages DIVs
-let msg = document.getElementsByClassName("message");
+// Write some custom JavaScript to automatically change the words of the conversation to something fun and good.
+// Write some JavaScript that will wait until the user clicks the "clear" button, and then clears out all conversation.
+let conversation = document.querySelectorAll("div.messages > div");
+console.log(conversation);
+// This changes the text by editing the text content of the div (with class "messages") as an array
+conversation[0].textContent = "Hey, Howz it?"
+conversation[1].textContent = "I'm good, how you bruh?"
+conversation[2].textContent = "Raving like one wave"
+conversation[3].textContent = "You like go catch some waves?"
+conversation[4].textContent = "Shoots bruh, let's go ova to Pipeline!"
+conversation[5].textContent = "Jump in da kawela and we go!"
 
-// Change the conversation
-msg[0].textContent = "you're great",
-msg[1].textContent = "thanks!",
-msg[2].textContent = "you're welcome",
-msg[3].textContent = "you're great",
-msg[4].textContent = "you're awesome!",
-msg[5].textContent = "no, you're awesome!",
+//This clears the chat
+let clearButton = document.getElementById("clear-button")
+clearButton.addEventListener("click", clearMessages)
+function clearMessages(){
+    let messages = document.querySelector("div.messages");
+    messages.innerHTML = "";
+}
 
-// clears the chat
-let clear = document.getElementById("clear-out");
-clear.addEventListener("click", function(){
-    let msgs = document.getElementsByClassName("messages");
-    msgs[0].innerHTML = "";
-});
+// Silver //
+//let theme = document.querySelector("theme-drop-down");
 
-// Change the theme
-let theme = document.getElementById("theme-drop-down")
-theme.addEventListener("change", function(){
-    var select = e.target;
-    var value = select.value;
-    console.log(value);
-});
+// Change the theme color
+//theme.addEventListener("change", function(){
+    //let select = e.target;
+    //let value = theme.select.input;
+    //body.label.select.style.color = value;
+    //console.log(value);
+//});
 
-// Make a new div with the input in the form box
-let newMsg = document.getElementById("input").value;
-let sent = document.getElementById("send-button");
-form.addEventListener("send", function(event){
-    event.preventDefault()
-})
-sent.addEventListener("click", function(){
-    /*let div = document.createElement('div')
-    div.textContent = newMsg;
-    div.className = "message left";
-    document.getElementsByClassName('messages').appendChild(div); */
-    console.log('sent');
-})
+// Gold Level //
+
+// Allows adding of new messages via send button function
+let messages = document.querySelector("div.messages")
+
+function sendMessage(event){
+        event.preventDefault();
+        var addMessage = document.createElement("div");
+        addMessage.setAttribute("class", "message left");
+        messages.append(addMessage);
+        let userMessage = document.getElementById("input").value;
+        addMessage.append(userMessage);
+        document.getElementById("input") = "";
+    }
+
+var form = document.querySelector("[name='message']");
+form.addEventListener("submit", sendMessage)
