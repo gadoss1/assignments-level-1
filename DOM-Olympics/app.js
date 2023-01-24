@@ -10,7 +10,6 @@ topHeader.innerHTML += "</br><span id='firstSpan'> Greg Doss </span><span id='se
 document.getElementById("firstSpan").style.color = "gold";
 document.getElementById("firstSpan").style.fontSize = "30px";
 document.getElementById("secondSpan").style.fontSize = "30px";
-body.style.color = "black";
 
 // Bronze level //
 
