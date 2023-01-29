@@ -15,7 +15,7 @@ form.addEventListener("submit", function(event) {
     
     //Add new item to list
     newDiv.textContent = userInput;
-    newDiv.id = 'div'
+    newDiv.id = 'div';
     editButton.textContent = "edit";
     clearsButton.textContent = "X",
     clearsButton.style.marginLeft = "5px";
