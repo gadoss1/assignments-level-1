@@ -3,8 +3,8 @@ const form = document.addItem;
 const list = document.getElementById("list");
 const hr = document.getElementById("hr");
 
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
     
     const userInput = form.title.value;
     form.title.value = "";

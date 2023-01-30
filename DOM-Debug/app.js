@@ -1,12 +1,14 @@
 // Constants for colors and list creation
-const colors = ["red", "blue", "green"];
-const list = document.querySelector("list");
-const form = document.addList;
+let colors = ["red", "blue", "green"];
+const list = document.getElementById("list");
+const form = document.getElementById("addList");
+const hr = document.getElementById("hr");
 
 // Adding items from input and add item button
-form.addEventListener("click", function(e) {
+form.addEventListener("submit", function(e) {
     e.preventDefault();
     
+    // Save data to new list item
     const userInput = form.title.value;
     form.title.value = "";
     let newLi = document.createElement("li");
@@ -21,11 +23,13 @@ form.addEventListener("click", function(e) {
     
 })
 
+// Creates subitem
 document.getElementById("add").addEventListener("click", function(e){
     const subItem = createSubItem(e);
     document.getElementById("list").appendChild(subItem);
 })
 
+// Dropdown box option menu
 function createDropDown(){
     const dropDown = document.createElement("select");
     for (let i = 0; i < colors; i++){
@@ -41,6 +45,7 @@ function createDropDown(){
     return dropDown;
 }
 
+// Create a submenu item
 function createSubItem(e){
     const subItem = document.createElement("div");
     var subItemValue = document.getElementById("input");
