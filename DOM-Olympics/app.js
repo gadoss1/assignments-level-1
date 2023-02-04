@@ -34,15 +34,16 @@ function clearMessages(){
 }
 
 // Silver //
-//let theme = document.querySelector("theme-drop-down");
+let theme = document.querySelector("#theme-drop-down");
 
-// Change the theme color
-//theme.addEventListener("change", function(){
-    //let select = e.target;
-    //let value = theme.select.input;
-    //body.label.select.style.color = value;
-    //console.log(value);
-//});
+// Change the theme color //
+theme.addEventListener("change", function(e){
+    let select = e.target;
+    let value = theme.value;
+    conversation[0].classList.replace(conversation[0].classList[2], value);
+    conversation[0].classList.add(value);
+    console.log(value);
+});
 
 // Gold Level //
 

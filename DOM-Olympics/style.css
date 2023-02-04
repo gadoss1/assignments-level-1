@@ -4,11 +4,11 @@
     flex-direction: column;
 }
 
-.theme-one{
+.left.theme-one{
     background-color:blue/brown;
 }
 
-.theme-two{
+.right.theme-two{
     background-color: red/black;
 }
 
