@@ -30,7 +30,9 @@ function multiplyNumbers(firstNumber, secondNumber){
     return firstNumber * secondNumber;
 };
 
-// Operations and answers //
+// Operations funcs and logic and final answers //
+
+calculator (firstNumber, secondNumber, operationOption);
 
 function calculator(firstNumber, secondNumber, operationOption){
 if (operationOption == "a"){
@@ -53,4 +55,3 @@ if (operationOption == "a"){
 
 }
 
-calculator(firstNumber, secondNumber, operationOption);
