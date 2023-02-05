@@ -35,21 +35,22 @@ function multiplyNumbers(num1, num2){
     // Function to make calculator work //
 calculator (num1, num2, operationOption);
 
+
     // Operations option selection for answer //
 function calculator(num1, num2, operationOption){
-if (operationOption == "a"){
+if (operationOption == "add"){
     console.log("The answer is sum of 2 numbers: ");
     addNumbers (num1, num2);
 
-    } else if (operationOption == "s"){
+    } else if (operationOption == "sub"){
         console.log ("The answer is result of a reduction: ")
         subtractNumbers (num1, num2);
 
-    } else if(operationOption == "m") {
+    } else if(operationOption == "mul") {
         console.log ("The answer is the product of 2 numbers: ")
         multiplyNumbers (num1, num2);
 
-    } else if (operationOption == "d"){
+    } else if (operationOption == "div"){
         console.log ("The answer is the division of 2 numbers: ")
         divideNumbers (num1, num2);
 
