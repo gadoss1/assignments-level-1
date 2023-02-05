@@ -11,37 +11,31 @@ var operationOption = rS.question("Please enter option needed: a, s, m, d ");
 // Const, funcs, and logic to add, subtract, divide, and multiply set of numbers //
 
 // Add //
-function addNumbers(num1, num2
-    ){
-    return num1 + num2
-    ;
+function addNumbers(num1, num2){
+    return num1 + num2;
 };
 
 // Subtract //
-function subtractNumbers(num1, num2
-    ){
-    return num1 - num2
-    ;
+function subtractNumbers(num1, num2){
+    return num1 - num2;
 };
 
 // Divide //
-function divideNumbers(num1, num2
-    ){
-    return num1 / num2
-    ;
+function divideNumbers(num1, num2){
+    return num1 / num2;
 };
 
 // Multiply //
-function multiplyNumbers(num1, num2
-    ){
-    return num1 * num2
-    ;
+function multiplyNumbers(num1, num2){
+    return num1 * num2;
 };
 
 // Operations funcs and logic and final answers //
 
+    // Function to make calculator work //
 calculator (num1, num2, operationOption);
 
+    // Operations option selection for answer //
 function calculator(num1, num2, operationOption){
 if (operationOption == "a"){
     console.log("The answer is sum of 2 numbers: ");
