@@ -4,54 +4,61 @@
 const rS = require("readline-sync");
 
 // Vars for number calculations //
-var firstNumber = rS.questionInt("Please enter first number: ");
-var secondNumber = rS.questionInt("Please enter second number: ");
+var num1 = rS.questionInt("Please enter first number: ");
+var num2 = rS.questionInt("Please enter second number: ");
 var operationOption = rS.question("Please enter option needed: a, s, m, d ");
 
 // Const, funcs, and logic to add, subtract, divide, and multiply set of numbers //
 
 // Add //
-function addNumbers(firstNumber, secondNumber){
-    return firstNumber + secondNumber;
+function addNumbers(num1, num2
+    ){
+    return num1 + num2
+    ;
 };
 
 // Subtract //
-function subtractNumbers(firstNumber, secondNumber){
-    return firstNumber - secondNumber;
+function subtractNumbers(num1, num2
+    ){
+    return num1 - num2
+    ;
 };
 
 // Divide //
-function divideNumbers(firstNumber, secondNumber){
-    return firstNumber / secondNumber;
+function divideNumbers(num1, num2
+    ){
+    return num1 / num2
+    ;
 };
 
 // Multiply //
-function multiplyNumbers(firstNumber, secondNumber){
-    return firstNumber * secondNumber;
+function multiplyNumbers(num1, num2
+    ){
+    return num1 * num2
+    ;
 };
 
 // Operations funcs and logic and final answers //
 
-calculator (firstNumber, secondNumber, operationOption);
+calculator (num1, num2, operationOption);
 
-function calculator(firstNumber, secondNumber, operationOption){
+function calculator(num1, num2, operationOption){
 if (operationOption == "a"){
     console.log("The answer is sum of 2 numbers: ");
-    addNumbers (firstNumber, secondNumber);
+    addNumbers (num1, num2);
 
     } else if (operationOption == "s"){
         console.log ("The answer is result of a reduction: ")
-        subtractNumbers (firstNumber, secondNumber);
+        subtractNumbers (num1, num2);
 
     } else if(operationOption == "m") {
         console.log ("The answer is the product of 2 numbers: ")
-        multiplyNumbers (firstNumber, secondNumber);
+        multiplyNumbers (num1, num2);
 
     } else if (operationOption == "d"){
         console.log ("The answer is the division of 2 numbers: ")
-        divideNumbers (firstNumber, secondNumber);
+        divideNumbers (num1, num2);
 
     }
 
 }
-
