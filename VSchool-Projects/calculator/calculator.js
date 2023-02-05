@@ -39,20 +39,21 @@ calculator (num1, num2, operationOption);
     // Operations option selection for answer //
 function calculator(num1, num2, operationOption){
 if (operationOption == "add"){
-    console.log("The answer is sum of 2 numbers: ");
-    addNumbers (num1, num2);
+    const answer = addNumbers (num1, num2);
+    console.log("The answer is sum of 2 numbers: " + answer);
 
     } else if (operationOption == "sub"){
-        console.log ("The answer is result of a reduction: ")
-        subtractNumbers (num1, num2);
-
+        const answer = subtractNumbers (num1, num2);
+        console.log ("The answer is result of a reduction: " + answer);
+        
     } else if(operationOption == "mul") {
-        console.log ("The answer is the product of 2 numbers: ")
-        multiplyNumbers (num1, num2);
+        const answer = multiplyNumbers (num1, num2);
+        console.log ("The answer is the product of 2 numbers: " + answer);
+        
 
     } else if (operationOption == "div"){
-        console.log ("The answer is the division of 2 numbers: ")
-        divideNumbers (num1, num2);
+        const answer = divideNumbers (num1, num2);
+        console.log ("The answer is the division of 2 numbers: " + answer);
 
     }
 
