@@ -6,7 +6,7 @@ const redlineSync = require("readline-sync");
 // Vars for number calculations //
 var num1 = redlineSync.questionInt("Please enter first number: ");
 var num2 = redlineSync.questionInt("Please enter second number: ");
-var operationOption = redlineSync.question("Please enter option needed: a, s, m, d ");
+var operationOption = redlineSync.question("Please enter option needed: add, sub, mul, div ");
 
 // Const, funcs, and logic to add, subtract, divide, and multiply set of numbers //
 
