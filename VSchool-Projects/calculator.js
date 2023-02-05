@@ -1,12 +1,12 @@
 // Node JS Calculator Project //
 
 // Constant to perform redline-sync in terminal node for JS commands //
-const rS = require("readline-sync");
+const redlineSync = require("readline-sync");
 
 // Vars for number calculations //
-var num1 = rS.questionInt("Please enter first number: ");
-var num2 = rS.questionInt("Please enter second number: ");
-var operationOption = rS.question("Please enter option needed: a, s, m, d ");
+var num1 = redlineSync.questionInt("Please enter first number: ");
+var num2 = redlineSync.questionInt("Please enter second number: ");
+var operationOption = redlineSync.question("Please enter option needed: a, s, m, d ");
 
 // Const, funcs, and logic to add, subtract, divide, and multiply set of numbers //
 
