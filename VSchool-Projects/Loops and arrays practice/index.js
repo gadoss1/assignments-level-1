@@ -1,18 +1,24 @@
 // Loops and Arrays exercise //
 
 // Constant to perform redline-sync in terminal node for JS commands //
-const redlineSync = require("readline-sync");
+// const redlineSync = require("readline-sync");
 
 // Computer for loop search with console log //
 var officeItems = ["stapler", "monitor", "computer", 
 "desk", "lamp", "computer", "lamp", "stapler", "computer",  "computer"]
+var computers = 0;
 
-for (var i = 0, i => officeItems.length, i++){
-    if (officeItems == "computer") { 
-    console.log ("I have many computers.");
+// Count how many computers there are in array of object
+
+for (var i = 0; i < officeItems.length; i++){
+    if (officeItems[i] === "computer") { 
+    console.log ("I have many computers!");
+    }
+    else if (officeItems[i] != "computer") {
+        console.log ("I have other office items.")
     }
 
-});
+};
 
 // Object loop //
 var custsForMadMax = [
@@ -39,11 +45,13 @@ var custsForMadMax = [
     }
   ] 
 
-function (custsForMadMax){
-  for (custsForMadMax) {
-    if (i = 0, object.age => '18', i++);
-        return ("name, age");
-        console.log ("They are old enough to see Mad Max Fury Road.");
+// Person old enough to see Mad Max Fury Road //
+  for (i = 0; i < custsForMadMax.length; i++) {
+    if (custsForMadMax[i].age >= 18) {
+        console.log (custsForMadMax[i].name + " is old enough to see Mad Max Fury Road." + " They are " + custsForMadMax[i].age + " years old.");
+      } 
+      else if (custsForMadMax[i].age <= 18) {
+        console.log (custsForMadMax[i].name + " isn't old enough to see Mad Max Fury Road." + " They are " + custsForMadMax[i].age + " years old.");
       }
 }
 
