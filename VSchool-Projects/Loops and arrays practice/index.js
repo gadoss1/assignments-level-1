@@ -12,10 +12,10 @@ var computers = 0;
 
 for (var i = 0; i < officeItems.length; i++){
     if (officeItems[i] === "computer") { 
-    console.log ("I have many computers!");
+    console.log ("These are the computers we have.");
     }
     else if (officeItems[i] != "computer") {
-        console.log ("I have other office items.")
+        console.log ("I have no more computers.")
     }
 
 };
@@ -54,15 +54,3 @@ var custsForMadMax = [
         console.log (custsForMadMax[i].name + " isn't old enough to see Mad Max Fury Road." + " They are " + custsForMadMax[i].age + " years old.");
       }
 }
-
-//### **Optional bonus challenges for this problem**
-
-//**#1**
-
-//Log to the console a personalized message like:
-
-//`Mike is not old enough to see Mad Max`
-
-//or
-
-//`Madeline is old enough to see Mad Max.`**#2**
