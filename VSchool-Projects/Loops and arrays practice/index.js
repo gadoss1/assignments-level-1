@@ -5,7 +5,7 @@
 
 // Computer for loop search with console log //
 var officeItems = ["stapler", "monitor", "computer", 
-"desk", "lamp", "computer", "lamp", "stapler", "computer",  "computer"]
+"desk", "lamp", "computer", "lamp", "stapler", "computer",  "computer"];
 
 // Count how many computers there are in array of object
 
