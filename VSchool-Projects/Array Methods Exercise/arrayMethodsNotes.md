@@ -52,6 +52,7 @@
     
     //arrOfFoods.splice(2, 2, "bacon", "ice cream")
     //console.log(arrOfFoods)
+    
 Array Methods
 Arrays have a lot of methods we can use to modify an array in one way or another. Below is a list with short explanations and examples of each method.
 This list does not cover the array methods that use callback functions, such as .filter() or .sort(). For that list, check out the Array Methods Continued post.
