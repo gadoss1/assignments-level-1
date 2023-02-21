@@ -57,55 +57,6 @@ while (isAlive == true && pressStart == true && room == 1)
 //While loop for room #2.
 while (isAlive == true && room == 2)
 {
-    const optionID = readline.keyIn("Press 1 to search the room. \nPress 2 to look at the table. \nPress 3 to charge through the door.", {limit: '$<1-3>'});
-    if (optionID == 1)
-    {
-        console.log("OTHER THAN THE TABLE, PEN AND PAPER YOU DO NOT SEE ANYTHING ELSE!");
-    }
-    else if (optionID == 2)
-    {
-        let lookAt = true;
-        console.log("On the table is a pen and a piece of paper. The paper says 'What do you think may enter my green glass door?'.");
-        while (lookAt == true)
-        {
-            const optionID2 = readline.keyIn("Press 1 to write on the paper and put it in the mail slot. \nPress 2 to go back.", {limit: '$<1-2>'});
-            if (optionID2 == 1)
-            {
-                const paperInput = readline.question("What do you want to write?: ");
-                for (i = 0; i < paperInput.length; i++)
-                {
-                    if (paperInput[i] == paperInput[i+1])
-                    {
-                        console.log("THE DOOR OPENED! \nYou enter a new room. A statue is standing in the center of the room. \nThere are pictures on one of the walls. \nWhat would you like to do?");
-                        lookAt = false;
-                        room = 3;
-                        break;
-                    }
-                    if (i == paperInput.length-1)
-                    {
-                        console.log("NOTHING HAPPENED! TRY AGAIN?");
-                        break;
-                    }
-                }
-            }
-            else if (optionID2 == 2)
-            {
-                console.log("YOU STEP AWAY FROM THE TABLE.")
-                lookAt = false;
-                break;
-            }
-        }
-    }
-    else if (optionID == 3)
-    {
-        console.log("OOPS! WHEN YOU CHARGED THROUGH THE DOOR THE GLASS IMPALED YOU! YOU'RE DEAD!");
-        isAlive = false;
-    }
-}
-
-//While loop for room #3.
-while (isAlive == true && room == 3)
-{
     let hitOne = false;
     let hitTwo = false;
     let hitThree = false;
