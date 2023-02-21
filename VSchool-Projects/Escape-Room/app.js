@@ -21,7 +21,7 @@ console.log(death);
 console.log(door);
 
 // Inputs and Logic
-for (escapeRoom){
+while (escapeRoom){
 
 if (age = 'Y'){
     console.log("Please start the game.");
