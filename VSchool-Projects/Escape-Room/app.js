@@ -54,7 +54,7 @@ while (isAlive == true && pressStart == true && room == 1)
     }
 }
 
-//While loop for room #2.
+//While loop for room #2. --$143 to leave
 while (isAlive == true && room == 2)
 {
     let hitOne = false;
