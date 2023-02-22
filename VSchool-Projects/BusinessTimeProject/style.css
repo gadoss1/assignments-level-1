@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    font-size: 50px;
+}
+
+/*Mobile Design*/
+@media only screen and (min-width: 0px) and (max-width: 650px){
+    
+    #box1{
+        display: grid;
+        background-color: turquoise;
+        padding: 0px auto;
+        border: 10px solid white;
+    }
+
+    #box2{
+        display: grid;
+        background-color: olive;
+        padding: 20px auto;
+        border: 10px solid white;
+    }
+
+    #box3{
+        display: grid;
+        background-color: orchid;
+        padding: 20px auto;
+        border: 10px solid white;
+    }
+
+    #box4{
+        display: grid;
+        background-color: palegoldenrod;
+        padding: 20px auto;
+        border: 10px solid white;
+    }
+
+    #box5{
+        display: grid;
+        background-color: orangered;
+        padding: 20px auto;
+        border: 10px solid white;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 650px) and (max-width: 768px){
+    
+    #box1{
+        display: grid;
+        background-color: turquoise;
+        padding: 0px auto;
+        border: 0px solid white;
+    }
+
+    #box2{
+        display: inline-block;
+        background-color: olive;
+        padding: 0px auto;
+        border: 0px solid white;
+    }
+
+    #box3{
+        display: inline-block;
+        background-color: orchid;
+        padding: 0px auto;
+        border: 0px solid white;
+    }
+
+    #box4{
+        display: grid;
+        background-color: palegoldenrod;
+        padding: 0px auto;
+        border: 0px solid white;
+    }
+
+    #box5{
+        display: grid;
+        background-color: orangered;
+        padding: 0px auto;
+        border: 0px solid white;
+    }
+}
+
+/*Large Screens and Desktops*/
+@media only screen and (min-width: 768px) and (max-width: 100000px){
+    
+    #box1{
+        display: grid;
+        background-color: turquoise;
+        padding: 10px auto;
+        border: 10px solid white;
+    }
+
+    #box2{
+        display: inline-block;
+        background-color: olive;
+        padding: 10px auto;
+        border: 10px solid white;
+    }
+
+    #box3{
+        display: inline-block;
+        background-color: orchid;
+        padding: 10px auto;
+        border: 10px solid white;
+    }
+
+    #box4{
+        display: inline-block;
+        background-color: palegoldenrod;
+        padding: 10px auto;
+        border: 10px solid white;
+    }
+
+    #box5{
+        display: grid;
+        background-color: orangered;
+        padding: 10px auto;
+        border: 10px solid white;
+    }
+}
