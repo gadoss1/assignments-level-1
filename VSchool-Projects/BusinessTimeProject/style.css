@@ -1,121 +1,258 @@
 * {
     box-sizing: border-box;
-    font-size: 50px;
 }
 
 /*Mobile Design*/
 @media only screen and (min-width: 0px) and (max-width: 650px){
-    
+    body{
+        background: radial-gradient(springgreen, yellow, orangered);
+    }
+
+    #flexContainer{
+        display: flex;
+        grid-template-columns: repeat(1fr);
+        grid-template-rows: repeat(1fr);
+
+    }
+
+    #nav{
+        background-color: beige;
+        width:min-content;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .img1{
+        height: 50px;
+        width: 25px;
+        size-adjust: 50%;
+    }
+
+    .img2{
+        height: 50px;
+        width: 25px;
+        size-adjust: 50%;
+    }
+
+    .img3{
+        height: 50px;
+        width: 25px;
+        size-adjust: 50%;
+    }
+
+    .img4{
+        height: 50px;
+        width: 25px;
+        size-adjust: 50%;
+    }
+
     #box1{
         display: grid;
-        background-color: turquoise;
+        background-color: bisque;
         padding: 0px auto;
-        border: 10px solid white;
+        border: 10px;
+        font-size: 50 px;
     }
 
     #box2{
         display: grid;
-        background-color: olive;
-        padding: 20px auto;
-        border: 10px solid white;
+        background-color: seagreen;
+        padding: 0px auto;
+        border: 10px;
+        font-size: 50 px;
     }
 
     #box3{
         display: grid;
         background-color: orchid;
-        padding: 20px auto;
-        border: 10px solid white;
+        padding: 0px auto;
+        border: 10px;
+        font-size: 50 px;
     }
 
     #box4{
         display: grid;
-        background-color: palegoldenrod;
-        padding: 20px auto;
-        border: 10px solid white;
+        background-color: blue;
+        padding: 0px auto;
+        border: 10px;
+        font-size: 50 px;
     }
 
     #box5{
         display: grid;
-        background-color: orangered;
-        padding: 20px auto;
-        border: 10px solid white;
+        background-color: aqua;
+        padding: 0px auto;
+        border: 10px;
+        font-size: 50 px;
     }
 }
 
 /* Tablet */
 @media only screen and (min-width: 650px) and (max-width: 768px){
-    
+    body{
+        background: radial-gradient(springgreen, yellow, orangered);
+    }
+
+    #flexContainer{
+        display: flex;
+        grid-template-columns: repeat(1fr);
+        grid-template-rows: repeat(1fr);
+
+    }
+
+    #nav{
+        background-color: beige;
+        width:min-content;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .img1{
+        height: 50px;
+        width: 25px;
+        size-adjust: 50%;
+    }
+
+    .img2{
+        height: 50px;
+        width: 25px;
+        size-adjust: 50%;
+    }
+
+    .img3{
+        height: 50px;
+        width: 25px;
+        size-adjust: 50%;
+    }
+
+    .img4{
+        height: 50px;
+        width: 25px;
+        size-adjust: 50%;
+    }
+
     #box1{
         display: grid;
-        background-color: turquoise;
+        background-color: bisque;
         padding: 0px auto;
-        border: 0px solid white;
+        border: 10px;
+        font-size: 50 px;
     }
 
     #box2{
-        display: inline-block;
-        background-color: olive;
+        display: grid;
+        background-color: seagreen;
         padding: 0px auto;
-        border: 0px solid white;
+        border: 10px;
+        font-size: 50 px;
     }
 
     #box3{
-        display: inline-block;
+        display: grid;
         background-color: orchid;
         padding: 0px auto;
-        border: 0px solid white;
+        border: 10px;
+        font-size: 50 px;
     }
 
     #box4{
         display: grid;
-        background-color: palegoldenrod;
+        background-color: blue;
         padding: 0px auto;
-        border: 0px solid white;
+        border: 10px;
+        font-size: 50 px;
     }
 
     #box5{
         display: grid;
-        background-color: orangered;
+        background-color: aqua;
         padding: 0px auto;
-        border: 0px solid white;
+        border: 10px;
+        font-size: 50 px;
     }
 }
 
 /*Large Screens and Desktops*/
 @media only screen and (min-width: 768px) and (max-width: 100000px){
-    
+    body{
+        background: radial-gradient(springgreen, yellow, orangered);
+    }
+
+    #flexContainer{
+        display: flex;
+        grid-template-columns: repeat(1fr);
+        grid-template-rows: repeat(1fr);
+
+    }
+
+    #nav{
+        background-color: beige;
+        width:min-content;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .img1{
+        height: 50px;
+        width: 25px;
+        size-adjust: 50%;
+    }
+
+    .img2{
+        height: 50px;
+        width: 25px;
+        size-adjust: 50%;
+    }
+
+    .img3{
+        height: 50px;
+        width: 25px;
+        size-adjust: 50%;
+    }
+
+    .img4{
+        height: 50px;
+        width: 25px;
+        size-adjust: 50%;
+    }
+
     #box1{
         display: grid;
-        background-color: turquoise;
-        padding: 10px auto;
-        border: 10px solid white;
+        background-color: bisque;
+        padding: 0px auto;
+        border: 10px;
+        font-size: 50 px;
     }
 
     #box2{
-        display: inline-block;
-        background-color: olive;
-        padding: 10px auto;
-        border: 10px solid white;
+        display: grid;
+        background-color: seagreen;
+        padding: 0px auto;
+        border: 10px;
+        font-size: 50 px;
     }
 
     #box3{
-        display: inline-block;
+        display: grid;
         background-color: orchid;
-        padding: 10px auto;
-        border: 10px solid white;
+        padding: 0px auto;
+        border: 10px;
+        font-size: 50 px;
     }
 
     #box4{
-        display: inline-block;
-        background-color: palegoldenrod;
-        padding: 10px auto;
-        border: 10px solid white;
+        display: grid;
+        background-color: blue;
+        padding: 0px auto;
+        border: 10px;
+        font-size: 50 px;
     }
 
     #box5{
         display: grid;
-        background-color: orangered;
-        padding: 10px auto;
-        border: 10px solid white;
+        background-color: aqua;
+        padding: 0px auto;
+        border: 10px;
+        font-size: 50 px;
     }
 }
