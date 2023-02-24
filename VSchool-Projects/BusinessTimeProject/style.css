@@ -1,5 +1,8 @@
-* {
+html, body {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Times New Roman;
 }
 
 /*Mobile Design*/
@@ -8,42 +11,75 @@
         background: radial-gradient(springgreen, yellow, orangered);
     }
 
-    #flexContainer{
-        display: flex;
-        grid-template-columns: repeat(1fr);
-        grid-template-rows: repeat(1fr);
+    h1{
 
+        align-items: center;
+        font-family: cursive;
+        color: darkcyan;
+        text-decoration: underline;
+        position: flex;
     }
 
-    #nav{
-        background-color: beige;
-        width:min-content;
-        padding: 10px;
+    h3{
+        font-size: 25px;
+    }
+
+    h4{
+        font-size: 25px;
+    }
+
+    h5{
+        font-size: 25px;
+    }
+
+    h6{
+        font-size: 25px;
+    }
+
+    h7{
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Tahoma;
+        align-items: center;
+        color:darkviolet;
+        text-decoration: underline;
+    }
+
+    #div1{
         align-items: center;
     }
 
+    #div2{
+        align-items: center;
+    }
+
+    #nav{
+        width:min-content;
+        padding: 10px;
+    }
+
     .img1{
-        height: 50px;
-        width: 25px;
-        size-adjust: 50%;
+        display: inline-block;
+        height: 100px;
+        width: 200px;
     }
 
     .img2{
-        height: 50px;
-        width: 25px;
-        size-adjust: 50%;
+        display: inline-block;
+        height: 100px;
+        width: 200px;
     }
 
     .img3{
-        height: 50px;
-        width: 25px;
-        size-adjust: 50%;
+        display: inline-block;
+        height: 100px;
+        width: 200px;
     }
 
     .img4{
-        height: 50px;
-        width: 25px;
-        size-adjust: 50%;
+        display: inline-block;
+        height: 100px;
+        width: 200px;
     }
 
     #box1{
@@ -60,6 +96,7 @@
         padding: 0px auto;
         border: 10px;
         font-size: 50 px;
+        font-stretch: unset;
     }
 
     #box3{
@@ -85,6 +122,11 @@
         border: 10px;
         font-size: 50 px;
     }
+
+    body.iframe{
+        align-items: center;
+    }
+
 }
 
 /* Tablet */
@@ -93,42 +135,75 @@
         background: radial-gradient(springgreen, yellow, orangered);
     }
 
-    #flexContainer{
-        display: flex;
-        grid-template-columns: repeat(1fr);
-        grid-template-rows: repeat(1fr);
+    h1{
 
+        align-items: center;
+        font-family: cursive;
+        color: darkcyan;
+        text-decoration: underline;
+        position: flex;
     }
 
-    #nav{
-        background-color: beige;
-        width:min-content;
-        padding: 10px;
+    h3{
+        font-size: 25px;
+    }
+
+    h4{
+        font-size: 25px;
+    }
+
+    h5{
+        font-size: 25px;
+    }
+
+    h6{
+        font-size: 25px;
+    }
+
+    h7{
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Tahoma;
+        align-items: center;
+        color:darkviolet;
+        text-decoration: underline;
+    }
+
+    #div1{
         align-items: center;
     }
 
+    #div2{
+        align-items: center;
+    }
+
+    #nav{
+        width:min-content;
+        padding: 10px;
+    }
+
     .img1{
-        height: 50px;
-        width: 25px;
-        size-adjust: 50%;
+        display: inline-block;
+        height: 100px;
+        width: 200px;
     }
 
     .img2{
-        height: 50px;
-        width: 25px;
-        size-adjust: 50%;
+        display: inline-block;
+        height: 100px;
+        width: 200px;
     }
 
     .img3{
-        height: 50px;
-        width: 25px;
-        size-adjust: 50%;
+        display: inline-block;
+        height: 100px;
+        width: 200px;
     }
 
     .img4{
-        height: 50px;
-        width: 25px;
-        size-adjust: 50%;
+        display: inline-block;
+        height: 100px;
+        width: 200px;
     }
 
     #box1{
@@ -145,6 +220,7 @@
         padding: 0px auto;
         border: 10px;
         font-size: 50 px;
+        font-stretch: unset;
     }
 
     #box3{
@@ -170,6 +246,11 @@
         border: 10px;
         font-size: 50 px;
     }
+
+    body.iframe{
+        align-items: center;
+    }
+
 }
 
 /*Large Screens and Desktops*/
@@ -178,42 +259,75 @@
         background: radial-gradient(springgreen, yellow, orangered);
     }
 
-    #flexContainer{
-        display: flex;
-        grid-template-columns: repeat(1fr);
-        grid-template-rows: repeat(1fr);
+    h1{
 
+        align-items: center;
+        font-family: cursive;
+        color: darkcyan;
+        text-decoration: underline;
+        position: flex;
     }
 
-    #nav{
-        background-color: beige;
-        width:min-content;
-        padding: 10px;
+    h3{
+        font-size: 25px;
+    }
+
+    h4{
+        font-size: 25px;
+    }
+
+    h5{
+        font-size: 25px;
+    }
+
+    h6{
+        font-size: 25px;
+    }
+
+    h7{
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Tahoma;
+        align-items: center;
+        color:darkviolet;
+        text-decoration: underline;
+    }
+
+    #div1{
         align-items: center;
     }
 
+    #div2{
+        align-items: center;
+    }
+
+    #nav{
+        width:min-content;
+        padding: 10px;
+    }
+
     .img1{
-        height: 50px;
-        width: 25px;
-        size-adjust: 50%;
+        display: inline-block;
+        height: 100px;
+        width: 200px;
     }
 
     .img2{
-        height: 50px;
-        width: 25px;
-        size-adjust: 50%;
+        display: inline-block;
+        height: 100px;
+        width: 200px;
     }
 
     .img3{
-        height: 50px;
-        width: 25px;
-        size-adjust: 50%;
+        display: inline-block;
+        height: 100px;
+        width: 200px;
     }
 
     .img4{
-        height: 50px;
-        width: 25px;
-        size-adjust: 50%;
+        display: inline-block;
+        height: 100px;
+        width: 200px;
     }
 
     #box1{
@@ -230,6 +344,7 @@
         padding: 0px auto;
         border: 10px;
         font-size: 50 px;
+        font-stretch: unset;
     }
 
     #box3{
@@ -255,4 +370,9 @@
         border: 10px;
         font-size: 50 px;
     }
+
+    body.iframe{
+        align-items: center;
+    }
+
 }
