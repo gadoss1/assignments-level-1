@@ -1,0 +1,29 @@
+body {
+    background: radial-gradient(burlywood,beige,lightblue);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: blue;
+}
+
+.navbar li {
+    display: inline-block;
+    color: orange;
+}
+
+.welcome {
+    text-decoration: underline;
+}
+
+.code-photo {
+    height: 100px;
+    width: 200px;
+}
+
+.list {
+    clear: both;
+    color: brown;
+}
+
+.fake-link {
+    text-decoration: underline;
+    cursor: pointer;
+}
