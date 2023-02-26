@@ -11,19 +11,32 @@ console.log(`Konichiwa & Hagimamashite, ${name} + ! + Time to fight like a Ninja
 
 let hp = 100
 
-function walk(){
-    const willFight = prompt('(f) for fighting, (i) for checking inventory')
-    if(willWalk === "f"){
-        fight()
-    } else if (willWalk === "i"){
-        checkInventroy()
-    } 
+function choose(){
+    const choice = readline.prompt('(c) for health points, (f) for fighting, (h) for heal, (i) for checking inventory, (p) for print, (r) for run, (w) for walk, ');
+    console.log(choice);
+    if(choose === "f"){
+        fighting();
+    } else if (choose === "i"){
+        checkInventory();
+    } else if (choose === "w"){
+        walk();
+    } else if (choose === "h"){
+        heal();
+    } else if (choose === "c"){
+        hp();
+    } else if (choose === "p"){
+        print();
+    } else if (choose === "r"){
+    }else {
+        walk ();
+    }
 }
 
 function fight(){
     const winner = selectWinner()
+    if(winner === "hero"){
+        walk()
+    }
 }
 
-while(hp > 0){
-    walk()
-}
+walk()
