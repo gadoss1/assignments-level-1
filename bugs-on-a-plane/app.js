@@ -1,28 +1,29 @@
-var form = document.getElementByID("airline-form");
-var submit = document.getElementByID(submit);
-var query = document.querySelector();
+var form = document.getElementById("airline-form");
+var submit = document.getElementById("submit");
+//var query = document.querySelector();
 
 function formAlert() {
-    var firstName = form.elements["firstName"].value;
-    var lastName = form.elements["lastName"].value;
-    var age = form.elements["age"].value;
-    var gender = form.elements["gender"].value;
+    console.log("submit");
+    var firstName = form["first-name"].value;
+    var lastName = form["last-name"].value;
+    var age = form["age"].value;
+    var gender = form["gender"].value;
     var location = form.elements["travel-location"].value;
-    var diet = {};
-    if (form.elements['vegan'].checked) {
+    var diet = [];
+    if (form['vegan'].checked) {
         diet.push(document.getElementById('vegan').value);
     }
-    if (form.elements['gluten'].checked) {
+    if (form['gluten'].checked) {
         diet.push(document.getElementById('gluten').value);
     }
-    if (form.elements['paleo'].checked) {
+    if (form['paleo'].checked) {
         diet.push(document.getElementById('paleo').value);
     }
 
-    submit.addEventListener("click", formAlert); //No pop up alert box. Need to fix.
+    console.log(diet);
 
     // Creates a confirmation form pop up box alert
     alert("This Page Says:" + "First Name: " + firstName + "\nLast Name: " + lastName + "\nAge: " + age + "\nGender: " + gender + "\nTravel Location: " + location + "\nDiet: " + diet + "\nAwesome, now if you die, it won't be an accident..");
 }
-
+submit.addEventListener("click", formAlert); //No pop up alert box. Need to fix.
 
