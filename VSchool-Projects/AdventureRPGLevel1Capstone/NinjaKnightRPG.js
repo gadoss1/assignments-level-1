@@ -1,14 +1,14 @@
 // Ninja Knight RPG //
 
 // Constant to perform redline-sync in terminal node for JS commands //
-const redlineSync = require("readline-sync");
+const readlineSync = require("readline-sync");
 
 // Game start information
-const name = readline.question("Please enter a name: " );
+const name = readlineSync.question("Please enter a name: " );
 console.log(`Konichiwa & Hagimamashite, brave ${name}! Time to fight like a couragous Ninja Knight!`);
 
 //Press start.
-const start = readline.keyIn(`${name} please press 1 to start.`, {limit: '$<1>'});
+const start = readlineSync.keyIn(`${name} please press 1 to start.`, {limit: '$<1>'});
 let pressStart = false;
 if (start === 1)
 {
@@ -26,7 +26,7 @@ function game()
 //RPG Variables
 const enemies = ["ronin", "ninja", "henchman", "daimyo", "sumo", "archer", "shogun boss", "emperor", "police officer", "onna-musha", "possessed warrior monk"];
 const treasure = ["Satchel of Mon", "Gold", "Potion", "Lucky Charm", "Set of Dice", "Enchanted Shamisen", "Magical Hand Fan"];
-const weapons = ["Kunai", "Tanto", "Bo", "Sword", "Wakazashi", "Sai", "Explosives", "Smoke Bomb", "Bow with Flaming Arrows"];
+const weapons = ["Kunai", "Tanto", "Bo", "Shiba Inu", "Sword", "Wakazashi", "Sai", "Explosives", "Smoke Bomb", "Bow with Flaming Arrows"];
 let inventory = [];
 let hasHealed = false;
 let killNum = 0;
@@ -42,7 +42,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
 
 // Action Choices
         //Action Options.
-        const perform = readline.keyIn("What would you like to do? \nPress 'W' to walk. \nPress 'H' to heal. \nPress 'C' to choose your weapon. \nPress 'P' to print stats. \nPress 'X' to exit the game.", {limit: '$<w, h, c, p, x>'});
+        const perform = readlineSync.keyIn("What would you like to do? \nPress 'W' to walk. \nPress 'H' to heal. \nPress 'C' to choose your weapon. \nPress 'P' to print stats. \nPress 'X' to exit the game.", {limit: '$<w, h, c, p, x>'});
 
         //Game Mechanics.
         if (perform == 'x')
@@ -92,7 +92,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
                 console.log(`------------------------------------ \nOh no! A ${enemy} just appeared! Time to fight for your life`);
                 while (qi > 0 && enemyHealth > 0)
                 {
-                    const actions = readline.keyIn("What would you like to do? \nPress 'R' to run away. \nPress 'A' to attack.", {limit: '<r, a>'});
+                    const actions = readlineSync.keyIn("What would you like to do? \nPress 'R' to run away. \nPress 'A' to attack.", {limit: '<r, a>'});
                     if (actions == 'r')
                     {
                         const run = Math.random();
