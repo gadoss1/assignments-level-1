@@ -56,7 +56,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
         } 
         else if (perform == 'c')
         {
-            console.log("That \n~~ ${weapon} may cause your death.");
+            console.log(`That \n~~ ${weapon} may cause your death.`);
         }
         else if (perform == 'h')
         {
@@ -89,7 +89,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
             }
             else if (randomize <= 0.25)
             {
-                console.log(`------------------------------------ \nOh no! A ${enemy} just appeared!`);
+                console.log(`------------------------------------ \nOh no! A ${enemy} just appeared! Time to fight for your life`);
                 while (qi > 0 && enemyHealth > 0)
                 {
                     const actions = readline.keyIn("What would you like to do? \nPress 'R' to run away. \nPress 'A' to attack.", {limit: '<r, a>'});
@@ -104,13 +104,13 @@ const heal = Math.floor(Math.random() * 70 + 1);
                             {
                                 console.log(`The ${enemy} has slain you! ${name} is dead!`);
                                 console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \n------------------------------------`);
-                                brk;
+                                break;
                             }
                         }
                         else if (run >= 0.51)
                         {
                             console.log("------------------------------------ \nYou got away safely!")
-                            brk;
+                            break;
                         }
                     }
                     else if (actions == 'a')
@@ -134,7 +134,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
                         {
                             console.log(`The ${enemy} has slain you! ${name} is dead!`);
                             console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \n------------------------------------`);
-                            brk;
+                            break;
                         }
                     }
                 }
