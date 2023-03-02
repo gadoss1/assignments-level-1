@@ -33,7 +33,7 @@ let killNum = 0;
 
 //Randomized Variables.
 let pickUp = treasure[(Math.floor(Math.random() * treasure.length))];
-let weapon = weapons[(Math.floorMath.random() * weapons.length)];
+let weapon = weapons[(Math.floor(Math.random() * weapons.length))];
 let enemyHealth = Math.floor(Math.random() * 200);
 const attackPower = Math.floor(Math.random() * (30 + 15 - 3) + 15);
 const enemy = enemies[Math.floor(Math.random() * enemies.length)];
