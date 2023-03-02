@@ -40,6 +40,8 @@ const enemy = enemies[Math.floor(Math.random() * enemies.length)];
 const enemyPower = Math.floor(Math.random() * (20 + 20 - 2) + 12);
 const heal = Math.floor(Math.random() * 70 + 1);
 
+game();
+
 // Action Choices
         //Action Options.
         const perform = readlineSync.keyIn("What would you like to do? \nPress 'W' to walk. \nPress 'H' to heal. \nPress 'C' to choose your weapon. \nPress 'P' to print stats. \nPress 'X' to exit the game.", {limit: '$<w, h, c, p, x>'});
@@ -121,10 +123,10 @@ const heal = Math.floor(Math.random() * 70 + 1);
                         console.log(`The ${enemy} attacked you for ${enemyPower} damage!`);
                         if (enemyHealth <= 0)
                         {
-                            console.log(`You successfully killed the ${enemy}!`);
+                            console.log(`You successfully killed the ${enemy}! You are a heroic and brave Ninja Knight!`);
                             killNum += 1;
-                            let dropLoot = Math.random();
-                            if (dropLoot <= 0.25)
+                            let treasure = Math.random();
+                            if (treasure <= 0.25)
                             {
                                 console.log(`You found a ${pickUp} on the dead ${enemy}!`);
                                 inventory.push(" " + pickUp);
@@ -143,4 +145,3 @@ const heal = Math.floor(Math.random() * 70 + 1);
     }
 }
 
-game();
