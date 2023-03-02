@@ -54,7 +54,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
         }
         else if (perform == 'p')
         {
-            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \nTreasure:${gainedTreasure} \n------------------------------------`);
+            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nWeapon:${weapon} \nTreasure:${gainedTreasure} \n------------------------------------`);
         } 
         else if (perform == 'c')
         {
@@ -105,7 +105,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
                             if (qi <= 0)
                             {
                                 console.log(`The ${enemy} has slain you! ${name} is dead!`);
-                                console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \nTreasure:${gainedTreasure} \n------------------------------------`);
+                                console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nWeapon:${weapon} \nTreasure:${gainedTreasure} \n------------------------------------`);
                                 break;
                             }
                         }
@@ -135,7 +135,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
                         if (qi <= 0)
                         {
                             console.log(`The ${enemy} has slain you! ${name} is dead! GAME OVER!.....`);
-                            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \nTreasure:${gainedTreasure} \n------------------------------------`);
+                            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nWeapon:${weapon} \nTreasure:${gainedTreasure} \n------------------------------------`);
                             break;
                         }
                     }
