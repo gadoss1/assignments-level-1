@@ -33,6 +33,7 @@ let killNum = 0;
 
 //Randomized Variables.
 let pickUp = treasure[(Math.floor(Math.random() * treasure.length))];
+let gainedTreasure = pickUp;
 let weapon = weapons[(Math.floor(Math.random() * weapons.length))];
 let enemyHealth = Math.floor(Math.random() * 200);
 const attackPower = Math.floor(Math.random() * (30 + 15 - 3) + 15);
@@ -48,12 +49,12 @@ const heal = Math.floor(Math.random() * 70 + 1);
         //Game Mechanics.
         if (perform == 'x')
         {
-            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nHealth: ${qi} \nKills: ${killNum} \nWeapon ${weapon} \nItems:${inventory} \nTreasure:${treasure} \n------------------------------------`);
+            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nHealth: ${qi} \nKills: ${killNum} \nWeapon ${weapon} \nItems:${inventory} \nTreasure:${gainedTreasure} \n------------------------------------`);
             return(qi = 0);
         }
         else if (perform == 'p')
         {
-            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \nTreasure:${treasure} \n------------------------------------`);
+            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \nTreasure:${gainedTreasure} \n------------------------------------`);
         } 
         else if (perform == 'c')
         {
@@ -104,7 +105,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
                             if (qi <= 0)
                             {
                                 console.log(`The ${enemy} has slain you! ${name} is dead!`);
-                                console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \nTreasure:${treasure} \n------------------------------------`);
+                                console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \nTreasure:${gainedTreasure} \n------------------------------------`);
                                 break;
                             }
                         }
@@ -134,7 +135,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
                         if (qi <= 0)
                         {
                             console.log(`The ${enemy} has slain you! ${name} is dead! GAME OVER!.....`);
-                            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \nTreasure:${treasure} \n------------------------------------`);
+                            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \nTreasure:${gainedTreasure} \n------------------------------------`);
                             break;
                         }
                     }
