@@ -48,12 +48,12 @@ const heal = Math.floor(Math.random() * 70 + 1);
         //Game Mechanics.
         if (perform == 'x')
         {
-            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nHealth: ${qi} \nKills: ${killNum} \nWeapon ${weapon} \nItems:${inventory} \n------------------------------------`);
+            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nHealth: ${qi} \nKills: ${killNum} \nWeapon ${weapon} \nItems:${inventory} \nTreasure:${treasure} \n------------------------------------`);
             return(qi = 0);
         }
         else if (perform == 'p')
         {
-            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \n------------------------------------`);
+            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \nTreasure:${treasure} \n------------------------------------`);
         } 
         else if (perform == 'c')
         {
@@ -104,7 +104,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
                             if (qi <= 0)
                             {
                                 console.log(`The ${enemy} has slain you! ${name} is dead!`);
-                                console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \n------------------------------------`);
+                                console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \nTreasure:${treasure} \n------------------------------------`);
                                 break;
                             }
                         }
@@ -134,7 +134,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
                         if (qi <= 0)
                         {
                             console.log(`The ${enemy} has slain you! ${name} is dead! GAME OVER!.....`);
-                            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \n------------------------------------`);
+                            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \nTreasure:${treasure} \n------------------------------------`);
                             break;
                         }
                     }
