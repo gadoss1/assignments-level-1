@@ -10,7 +10,7 @@ console.log(`Konichiwa & Hagimamashite, brave ${name}! Time to fight like a cour
 //Press start.
 const start = readlineSync.keyIn(`${name} please press 1 to start.`, {limit: '$<1>'});
 let pressStart = false;
-if (start === 1)
+if (start == 1)
 {
     console.log("------------------------------------ \nIt is a stormy and dreary night. You're standing on a dimly lit road between two villages. Dangerous enemies plague this area! Be careful!");
     pressStart = true;
@@ -133,7 +133,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
                         }
                         if (qi <= 0)
                         {
-                            console.log(`The ${enemy} has slain you! ${name} is dead!`);
+                            console.log(`The ${enemy} has slain you! ${name} is dead! GAME OVER!.....`);
                             console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nItems:${inventory} \n------------------------------------`);
                             break;
                         }
