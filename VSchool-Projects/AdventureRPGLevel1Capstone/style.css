@@ -1,0 +1,15 @@
+body{
+    background: radial-gradient(yellow, red, orange);
+}
+
+.img1{
+    display: grid;
+    height: 100px;
+    width: 50px;
+}
+
+.img2{
+    display: grid;
+    height: 100px;
+    width: 50px;
+}

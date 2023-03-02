@@ -40,7 +40,6 @@ const enemy = enemies[Math.floor(Math.random() * enemies.length)];
 const enemyPower = Math.floor(Math.random() * (20 + 20 - 2) + 12);
 const heal = Math.floor(Math.random() * 70 + 1);
 
-game();
 
 // Action Choices
         //Action Options.
@@ -145,3 +144,4 @@ game();
     }
 }
 
+game();
