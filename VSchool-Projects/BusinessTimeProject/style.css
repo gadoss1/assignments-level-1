@@ -10,6 +10,10 @@ body{
     background: radial-gradient(springgreen, yellow, orangered);
 }
 
+.p{
+    background: black;
+}
+
 h1{
 
     align-items: center;
