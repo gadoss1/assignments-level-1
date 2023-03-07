@@ -1,0 +1,22 @@
+body{
+    background-color: azure;
+}
+
+div1{
+    background: green;
+    align-items: "grid";
+    padding: 10px;
+
+}
+
+div2{
+    background: red;
+    align-items: "grid";
+    padding: 10px;
+}
+
+div3{
+    background: orange;
+    align-items: "grid";
+    padding: 10px;
+}

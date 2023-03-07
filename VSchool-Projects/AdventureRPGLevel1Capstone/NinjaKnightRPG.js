@@ -54,7 +54,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
         }
         else if (perform == 'p')
         {
-            console.log(`------------------------------------ \n~~ ${name}'s Final Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nWeapon:${weapon} \nTreasure:${gainedTreasure} \n------------------------------------`);
+            console.log(`------------------------------------ \n~~ ${name}'s Current Stats ~~ \nName: ${name} \nQi: ${qi} \nKills: ${killNum} \nWeapon:${weapon} \nTreasure:${gainedTreasure} \n------------------------------------`);
         } 
         else if (perform == 'c')
         {
@@ -124,7 +124,7 @@ const heal = Math.floor(Math.random() * 70 + 1);
                         if (enemyHealth <= 0)
                         {
                             console.log(`You successfully killed the ${enemy}! You are a heroic and brave Ninja Knight!`);
-                            killNum += 1;
+                            killNum = killNum++;
                             let treasure = Math.random();
                             if (treasure <= 0.25)
                             {
