@@ -15,40 +15,63 @@
 
         <form id= "invoice">
 
-        <div id = "Date of Service">
-            *Date of Service: <input type="date" id="dateOfService" required>
+        <div>
+            <h3 id="customerInfo">Customer Information</h3>
+            <h4 id="requiredInfo">Required (*)</h4>
+            *Date of Service: <input type="date" name="dateOfService" id="dateOfService">
+            <label for="dateOfService"></label>
+            <br>
+            *Name: <input type="text" name="name" id="name" required>
+            <label for=""></label>
+            <br>
+            *Street: <input type="text" name="street" id="street" required>
+            <label for=""></label>
+            <br>
+            *Castle, Kingdom, World: <input type="text" name= "location" id="location" placeholder="Castle, Kingdom, World" required>
+            <label for=""></label>
+            <br>
+            *Email: <input type="text" name="email" id="email" placeholder="Email" required>
+            <label for=""></label>
+            <br>
+            *Phone #: <input type="text" name="phone" id="phone" placeholder="Phone #" required>
+            <label for=""></label>
+            <br>
         </div>
 
+        <h1 id="baddieTypePricing">Baddie Types and Pricing</h1>
+        <br>
         <div id = "goombas">
             <h2 id="goombaSection">Goombas</h2>
             <iframe src="https://giphy.com/embed/1JMItpzW4iCNoz3r76" id= "goombagif" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-            Bounty Price: 5 coins (non-negotiable) x *
-            Amount: <input type="number" id="amount" name="amount" placeholder="Enter Goomba Qty" required/> = 
+            Bounty Price: 5 coins (non-negotiable) x
+            *Amount: <input type="number" id="amount" name="amount" placeholder="Enter Goomba Qty" required/> = 
             <input type="text" placeholder="Total Goombas Price" required>
-            <button id="totalbtn">Total</button>
+            <label for="goombaTotalPrice"></label>
+            <button id="goombaTotalBtn">Total</button>
         
         </div>
 
         <div id = "bobOmbs">
             <h2 id="bobombSection">Bob-ombs</h2>
             <iframe src="https://giphy.com/embed/l0MYz5mGpy0vLGnbW" id= "bobombgif" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-            Bounty Price: 7 coins (non-negotiable) x *
-            Amount: <input type="number" id="amount" name="amount" placeholder="Bob-Omb Qty" required/> = 
+            Bounty Price: 7 coins (non-negotiable) x
+            *Amount: <input type="number" id="amount" name="amount" placeholder="Bob-Omb Qty" required/> = 
             <input type="text" placeholder="Total Bob-Ombs Price" required>
-            <button id="totalbtn">Total</button>
+            <label for="bobombsTotalPrice"></label>
+            <button id="bobombsTotalBtn">Total</button>
             
         </div>
 
         <div id = "cheepCheeps">
             <h2 id="cheepCheepSection">Cheep-Cheeps</h2>
             <div class="tenor-gif-embed" id="cheepCheepgif" data-postid="27172254" data-share-method="host" data-aspect-ratio="1.98758" data-width="50%"><a href="https://tenor.com/view/mario-mario-mario-mario-cheep-cheep-cheep-cheep-mario-fish-gif-27172254">Mario Mario Mario GIF</a>from <a href="https://tenor.com/search/mario+mario-gifs">Mario Mario GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-            Bounty Price: 11 coins (non-negotiable) x *
-            Amount: <input type="number" id="amount" name="amount" placeholder="Cheep-Cheep Qty" required/> = 
+            Bounty Price: 11 coins (non-negotiable) x
+            *Amount: <input type="number" id="amount" name="amount" placeholder="Cheep-Cheep Qty" required/> = 
             <input type="text" placeholder="Total Cheep-Cheep Price" required>
-            <button id="totalbtn">Total</button>
-                
+            <label for="cheepCheepTotalPrice"></label>
+            <button id="cheepCheepTotalBtn">Total</button>
         </div>
-
+        <br>
         <div id="grandTotal">
             <h3 id="invoice">Invoice Total</h3>
             Will Princess Peach Be In Another Castle? 
