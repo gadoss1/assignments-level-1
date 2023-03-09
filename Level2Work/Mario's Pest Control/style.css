@@ -1,0 +1,46 @@
+body{
+    background: radial-gradient(green,lightblue,crimson);
+}
+
+h1{
+font-weight: bold;
+font-family:'Times';
+text-decoration: underline;
+color: black;
+}
+
+#motto{
+    color: goldenrod;
+    font-style: italic;
+}
+
+#mariopic{
+    width: 300px;
+    height: 200;
+}
+
+.goombagif{
+    width: 300px; 
+    height: 200px; 
+}
+
+.bobOmbgif{
+    width: 380px; 
+    height: 260px; 
+}
+
+#goombaSection{
+    text-decoration: underline;
+}
+
+#bobombSection{
+    text-decoration: underline;
+}
+
+#cheepCheepSection{
+    text-decoration: underline;
+}
+
+#invoice{
+    text-decoration: underline;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>Murderous Airlines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to Murderous Airlines! </h1>
+    <h1>"We Fly....You Buy & Die!"</h1>
+    <img src="https://images.unsplash.com/photo-1581012771300-224937651c42?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" id="img1">
+    <p>Please Fill Out The Following So You Can Book Your Flight To Your Death!</p>
+    <form id="airline-form">
+        First Name: <input type="text" name="first-name" placeholder="First Name">
+        <label for=""></label>
+        <br>
+        Last Name: <input type="text" name="last-name" placeholder="Last Name">
+        <label for=""></label>
+        <br>
+        Age: <input type="number" name="age" placeholder="Age">
+        <label for=""></label>
+        <br>
+        Gender: <input type="radio" name="gender" value="male" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="female" id="female">
+        <label for="female">Female</label>
+        <br>
+        Departing: <input type="date" name="departing" id="departing">
+        <label for="departing"></label>
+        <br>
+        Returning: <input type="date" name="returning" id="returning">
+        <label for="returning"></label>
+        <br>
+        Destination: <select name="destination">
+            <option value="Death Valley">Death Valley, CA</option>
+            <option value="San Andreas">San Andreas Fault, CA</option>
+            <option value="Kwajalein Atoll">Kwajalein Atoll</option>
+            <option value="Marianas Trench">Marianas Trench</option>
+            <option value="Hell, Michigan">Hell, MI, USA</option>
+        </select>
+        <label for=""></label>
+        <br>
+        <input class="last-meal" type="checkbox" name="The Hannibal Lecture" id="The Hannibal Lecture" value="The Hannibal Lecture">
+        <label for="The Hannibal Lecture">The Hannibal Lecture (Your liver with some fava beans and a nice chianti)</label>
+        <br>
+        <input class="last-meal" type="checkbox" name="vegan" id="vegan" value="vegan">
+        <label for="vegan">Vegan (Seriously, you are dying here! You must be a cow.)</label>
+        <br>
+        <input class="last-meal" type="checkbox" name="Death by Wheat" id="Death by Wheat" value="Death by Wheat"-free">
+        <label for="Death by Wheat">Gluten-Free (Guess wheat is your Kryptonite)</label>
+        <br>
+        <input class="last-meal" type="checkbox" name="caveman" id="caveman" value="caveman">
+        <label for="caveman">Paleo (Find a time machine to eat like a caveman)</label>
+        <br>
+        <input class="last-meal" type="checkbox" name="The Willy Wonka" id="The Willy Wonka" value="The Willy Wonka">
+        <label for="The Willy Wonka">Willy Wonka (Death by sugar, chocolate, & snozberries)</label>
+        <br>
+        <button type="button" id="submit">Submit</button>
+    </form>
+    <script src= "index.js"></script>
+</body>
+</html>

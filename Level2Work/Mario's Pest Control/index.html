@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mario's Pest Control</title>
+        <h1 id="businessTitle">Mario's Pest Control</h1>
+        <h2 id="motto">"Eliminating King Koopa Baddies Pest Problems For The Kingdoms"</h2>
+        <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" id="mariopic">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+        <h1>Service Quote/Invoice</h1>
+        <h3> **Note: If Princess Peach is in another castle our rate is 100 times the grand total** </h3>
+
+        <form id= "invoice">
+
+        <div id = "Date of Service">
+            *Date of Service: <input type="date" id="dateOfService" required>
+        </div>
+
+        <div id = "goombas">
+            <h2 id="goombaSection">Goombas</h2>
+            <iframe src="https://giphy.com/embed/1JMItpzW4iCNoz3r76" id= "goombagif" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            Bounty Price: 5 coins (non-negotiable) x *
+            Amount: <input type="number" id="amount" name="amount" placeholder="Enter Goomba Qty" required/> = 
+            <input type="text" placeholder="Total Goombas Price" required>
+            <button id="totalbtn">Total</button>
+        
+        </div>
+
+        <div id = "bobOmbs">
+            <h2 id="bobombSection">Bob-ombs</h2>
+            <iframe src="https://giphy.com/embed/l0MYz5mGpy0vLGnbW" id= "bobombgif" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            Bounty Price: 7 coins (non-negotiable) x *
+            Amount: <input type="number" id="amount" name="amount" placeholder="Bob-Omb Qty" required/> = 
+            <input type="text" placeholder="Total Bob-Ombs Price" required>
+            <button id="totalbtn">Total</button>
+            
+        </div>
+
+        <div id = "cheepCheeps">
+            <h2 id="cheepCheepSection">Cheep-Cheeps</h2>
+            <div class="tenor-gif-embed" id="cheepCheepgif" data-postid="27172254" data-share-method="host" data-aspect-ratio="1.98758" data-width="50%"><a href="https://tenor.com/view/mario-mario-mario-mario-cheep-cheep-cheep-cheep-mario-fish-gif-27172254">Mario Mario Mario GIF</a>from <a href="https://tenor.com/search/mario+mario-gifs">Mario Mario GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+            Bounty Price: 11 coins (non-negotiable) x *
+            Amount: <input type="number" id="amount" name="amount" placeholder="Cheep-Cheep Qty" required/> = 
+            <input type="text" placeholder="Total Cheep-Cheep Price" required>
+            <button id="totalbtn">Total</button>
+                
+        </div>
+
+        <div id="grandTotal">
+            <h3 id="invoice">Invoice Total</h3>
+            Will Princess Peach Be In Another Castle? 
+            <input type="radio" name="missing" value="yes" id="yes">
+            <label for="yes">Yes</label>
+            <input type="radio" name="missing" value="no" id="no">
+            <label for="no">No</label>
+            <input type="radio" name="missing" value="Do Not Know" id="doNotKnow">
+            <label for="Do Not Know">Don't Know</label>
+            <br>
+            Goomba Total + Bob-Oms Total + Cheep-Cheep Total = <input type="text" placeholder="Grand Total" required>
+            <button id="grandtotal">Invoice Total</button>
+        </div>
+        
+
+        </form>
+
+       <br>
+
+        <script src="index.js"></script>
+    </body>
+
+    <footer>
+        <h3>Contact Us</h3>
+        Email:   mariospestcontrol@peachisneverthere.com
+        <br>
+        Website: www.mariospestcontrol.com
+        <br>
+        Address: 665 Toadstool Way, Mushroom Forest, Mushroom Kingdom 54112
+        <br>
+        Phone:   10-888-556-1120
+        <br>
+    </footer>

@@ -1,22 +1,32 @@
-body{
-    background-color: azure;
+html, body {
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 0;
+    font-family: Times New Roman;
 }
 
-div1{
+body{
+    background-color: rosybrown;
+}
+
+#add{
     align-items: grid;
     background-color: green;
+    text-decoration: underline;
     padding: 10px;
 
 }
 
-div2{
+#subtract{
     align-items: grid;
+    text-decoration: underline;
     background-color: red;
     padding: 10px;
 }
 
-div3{
+#multiply{
     align-items: grid;
-    background-color: orange;
-    padding: 10px;
+    text-decoration: underline;
+    background-color:brown
+
 }

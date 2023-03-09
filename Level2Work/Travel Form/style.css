@@ -1,0 +1,10 @@
+body{
+    background:linear-gradient(red, silver, yellow);
+}
+
+#img1{
+    align-items: center;
+    justify-content: baseline;
+    height: 200px;
+    width: 300px;
+}
