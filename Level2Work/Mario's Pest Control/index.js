@@ -1,23 +1,27 @@
-// Variables //
-const custInvoice = document.getElementById("invoice")
-const grandTotal = document.getElementById("grandTotal")
-const goombaPrice = document.getElementById
+// Global Constants
+const form = document.pestControl
+const grandTotal = document.getElementById("totalCost")
+const grandTotalBtn = document.getElementById("submit")
+
+// Invoice/Quote Grand Total
+grandTotalBtn.addEventListener("click", function(event){
+    event.preventDefault() 
+
+    // Goombas
+    let goombaAmount = form.element["goombaQty"].value
+    let goombaTotal = goombaAmount * 5
+    console.log(goombaTotal)
+
+    // Bob-Ombs
+    let bobombsAmount = form.element["bobombsQty"].value
+    let bobombsTotal = bobombsAmount * 7
+    console.log(bobombsTotal)
+
+    // Cheep-Cheeps
+    let cheepCheepAmount = form.element["cheepCheepQty"].value
+    let cheepCheepTotal = cheepCheepAmount * 11
+    console.log(cheepCheepTotal)
 
 
-function formAlert() {
-    console.log("submit")
-    // Invoice-Quote
-    let dateOfService = invoice.elements["dateOfService"].value
-    let name = invoice["name"].value
-    let address = {Street: invoice["street"].value,
-                   Location:invoice["location"].value,
-                    }
-    let email = invoice["email"].value
-    let phoneNumber = invoice["phone"].value
-    let destination = invoice.elements["destination"].value
-    let lastMeal = []
-
-    // Creates a confirmation form pop up box alert
-    alert("Mario's Pest Control" +  "\nDate of Service: " + dateOfService + "\nName: " + name + "\nAddress: " + address + "\nEmail Address: " + email + "\nPhone #: " + phoneNumber + "\nGoomba Total Price: " + goombaTotal + "\nBob-Ombs Total Price: " + bobOmsTotal + "\nCheep Cheep Total Price: " + cheepCheepTotal + "\nInvoice/Quote Grand Total: "+ grandTotal + "\nThank you for allowing Mario's Pest Service to take care of your pests!")
-}
-grandTotal.addEventListener("click", formAlert)
+    totalCost.textContent = "Total: " + (goombaTotal + bobombsTotal + cheepCheepTotal) + " Coins"
+})

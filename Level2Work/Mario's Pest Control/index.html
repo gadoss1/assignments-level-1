@@ -13,7 +13,7 @@
         <h1>Service Quote/Invoice</h1>
         <h3> **Note: If Princess Peach is in another castle our rate is 100 times the grand total** </h3>
 
-        <form id= "invoice">
+        <form id= "pestControl">
 
         <div>
             <h3 id="customerInfo">Customer Information</h3>
@@ -41,56 +41,29 @@
         <h1 id="baddieTypePricing">Baddie Types and Pricing</h1>
         <br>
         <div id = "goombas">
-            <h2 id="goombaSection">Goombas</h2>
+            <h2 id="goombaSection">Goombas (5 Coins)</h2>
             <iframe src="https://giphy.com/embed/1JMItpzW4iCNoz3r76" id= "goombagif" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-            Bounty Price: 5 coins (non-negotiable) x
-            *Amount: <input type="number" id="amount" name="amount" placeholder="Enter Goomba Qty" required/> = 
-            <input type="text" placeholder="Total Goombas Price" required>
-            <label for="goombaTotalPrice"></label>
-            <button id="goombaTotalBtn">Total</button>
-        
+            *Amount: <input type="number" id="goombaQty" name="goombaQty" placeholder="Goomba Qty" required/> 
         </div>
 
-        <div id = "bobOmbs">
-            <h2 id="bobombSection">Bob-ombs</h2>
+        <div id = "bobombs">
+            <h2 id="bobombSection">Bob-ombs (7 Coins)</h2>
             <iframe src="https://giphy.com/embed/l0MYz5mGpy0vLGnbW" id= "bobombgif" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-            Bounty Price: 7 coins (non-negotiable) x
-            *Amount: <input type="number" id="amount" name="amount" placeholder="Bob-Omb Qty" required/> = 
-            <input type="text" placeholder="Total Bob-Ombs Price" required>
-            <label for="bobombsTotalPrice"></label>
-            <button id="bobombsTotalBtn">Total</button>
-            
+            *Amount: <input type="number" id="bobombsQty" name="bobombsQty" placeholder="Bob-Omb Qty" required/> 
         </div>
 
         <div id = "cheepCheeps">
-            <h2 id="cheepCheepSection">Cheep-Cheeps</h2>
+            <h2 id="cheepCheepSection">Cheep-Cheeps (11 Coins)</h2>
             <div class="tenor-gif-embed" id="cheepCheepgif" data-postid="27172254" data-share-method="host" data-aspect-ratio="1.98758" data-width="50%"><a href="https://tenor.com/view/mario-mario-mario-mario-cheep-cheep-cheep-cheep-mario-fish-gif-27172254">Mario Mario Mario GIF</a>from <a href="https://tenor.com/search/mario+mario-gifs">Mario Mario GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-            Bounty Price: 11 coins (non-negotiable) x
-            *Amount: <input type="number" id="amount" name="amount" placeholder="Cheep-Cheep Qty" required/> = 
-            <input type="text" placeholder="Total Cheep-Cheep Price" required>
-            <label for="cheepCheepTotalPrice"></label>
-            <button id="cheepCheepTotalBtn">Total</button>
+            *Amount: <input type="number" id="cheepCheepQty" name="cheepCheepQty" placeholder="Cheep-Cheep Qty" required/> 
         </div>
         <br>
-        <div id="grandTotal">
             <h3 id="invoice">Invoice Total</h3>
-            Will Princess Peach Be In Another Castle? 
-            <input type="radio" name="missing" value="yes" id="yes">
-            <label for="yes">Yes</label>
-            <input type="radio" name="missing" value="no" id="no">
-            <label for="no">No</label>
-            <input type="radio" name="missing" value="Do Not Know" id="doNotKnow">
-            <label for="Do Not Know">Don't Know</label>
-            <br>
-            Goomba Total + Bob-Oms Total + Cheep-Cheep Total = <input type="text" placeholder="Grand Total" required>
-            <button id="grandtotal">Invoice Total</button>
-        </div>
-        
-
+            <button id="submit">Total</button>
         </form>
 
        <br>
-
+       <p id="totalCost">Total: </p>
         <script src="index.js"></script>
     </body>
 
