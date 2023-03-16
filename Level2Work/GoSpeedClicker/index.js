@@ -1,24 +1,37 @@
 let clicks = 0; // counter 
 let clickerStart = document.getElementById("startButton")
+let timeStart = document.getElementById("computerMouse")
+let countdown = 10 //Time Count
 
     // Time & stop time
-    let timeInterval = setTimeout(function(){
-        console.log('Times Up!');
-    }, 10000);
-    
-     // 10 seconds later
-    'Times Up!'
-startButton.addEventListener("click", timeInterval)   
+    let timeInterval = setInterval(function(){
+        
+        countdown--
+        //computerMouse.addEventListener("mouseover", timeInterval)
+        console.log(countdown)
+        
+        if (countdown <= 0)  {
+            clearInterval(timeInterval)
+
+            console.log('Times Up!');
+        }
+
+    }, 1000);
+
 
 
 // Start
-startButton.addEventListener("click", function(event){
+clickerStart.addEventListener("click", async function(event){
     event.preventDefault()
 
-    startButton.addEventListener("click", clickerStart)
-    console.log(++clicks); // increment it
+    clickerStart.addEventListener("click", function(){
 
-    clearInterval(timeInterval) // stops time interval
+        console.log(clicks); // increment it
+
+        clicks = clicks + 1
+        totalClicks.textContent = "Total Clicks: " + clicks + " Clicked"
+
+    })
 })
 
 // To save this object to web storage:
@@ -26,7 +39,3 @@ startButton.addEventListener("click", function(event){
 
 // To retrieve this object from web storage:
 //let user = JSON.parse(localStorage.user);
-
-const clickTotal = []
-clickTotal.push(clicks)
-totalClicks.textContent = "Total Clicks: " + clickTotal + " Clicked"
