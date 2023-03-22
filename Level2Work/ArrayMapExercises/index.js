@@ -1,4 +1,4 @@
-// Double Numbers #1
+// 1. Double Numbers
 const numbers = [2, 5, 10]
 
 function doubleNumbers(numbers){
@@ -14,23 +14,25 @@ function doubleNumbers(numbers){
   console.log(doubleNumbers([2, 5, 100])); // [4, 10, 200]
 
 
-// Array of Numbers & make them strings #2
+//*** // 2. Array of Numbers & make them strings
 
 const nums = [2, 5, 100]
 
-function stringItUp(nums){
-    const numString = nums.map((String) => {
-        return numString
+function stringItUp(numsArray){
+    //let numString = numsArray.map(nums=>nums.toString())
+    //return numString
+    return numsArray.map(nums=>nums.toString())
 }
-    console.log(stringItUp) // ["2", "5", "100"]
+
+console.log(stringItUp(nums)) // ["2", "5", "100"]
 
 
-// Capitalize first letter of names and lower case rest of letters #3
+// 3. Capitalize first letter of names and lower case rest of letters
 let names = ["john", "JACOB", "jinGleHeimer", "schmidt"]
 
 
   function capitalizeNames(names){
-    let nameChanges = names.split(' ').map(s => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()).join(' ')
+    let nameChanges = names.map(s => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()).join(' ')
     return nameChanges
 }
 
@@ -40,97 +42,128 @@ console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"]))
   // Output:
   // ["John", "Jacob", "Jingleheimer", "Schmidt"]
 
-// An Array of Strings of names #4
+// 4. An Array of Strings of names
 
-function namesOnly(arr){
-    // your code here
-  }
-  
-  console.log(namesOnly([
-      {
-          name: "Angelina Jolie",
-          age: 80
-      },
-      {
-          name: "Eric Jones",
-          age: 2
-      },
-      {
-          name: "Paris Hilton",
-          age: 5
-      },
-      {
-          name: "Kayne West",
-          age: 16
-      },
-      {
-          name: "Bob Ziroll",
-          age: 100
-      }
-  ]));
-  // ["Angelina Jolie", "Eric Jones", "Paris Hilton", "Kayne West", "Bob Ziroll"]
+const nameAgeArr = [{
+    name: "Angelina Jolie",
+    age: 80,
+},
+{    name: "Eric Jones",
+    age: 2,
+},
+{
+    name: "Paris Hilton",
+    age: 5,
+},
+{
+    name: "Kayne West",
+    age: 16,
+},
+{
+    name: "Bob Ziroll",
+    age: 100,
+}]
 
-// Array of strings of names saying whether or not they can go to the Matrix #5
+// ["Angelina Jolie", "Eric Jones", "Paris Hilton", "Kayne West", "Bob Ziroll"]
 
-function makeStrings(arr){
-    // your code here
-  }
-  
-  console.log(makeStrings([
-      {
-          name: "Angelina Jolie",
-          age: 80
-      },
-      {
-          name: "Eric Jones",
-          age: 2
-      },
-      {
-          name: "Paris Hilton",
-          age: 5
-      },
-      {
-          name: "Kayne West",
-          age: 16
-      },
-      {
-          name: "Bob Ziroll",
-          age: 100
-      }
-  ]));
+const namesOnly = nameAgeArr.map(namesObject => namesObject.name)
+
+    console.log(namesOnly) 
+
+// 5. Array of strings of names saying whether or not they can go to the Matrix
+
+const matrixMovieCustomers = [{
+    name: "Angelina Jolie",
+    age: 80,
+},
+{    name: "Eric Jones",
+    age: 2,
+},
+{
+    name: "Paris Hilton",
+    age: 5,
+},
+{
+    name: "Kayne West",
+    age: 16,
+},
+{
+    name: "Bob Ziroll",
+    age: 100,
+}]
+
+function matrixMovieLimit(matrixLimit){
+
+    matrixLimit.map(function(person){
+                
+        if (person.age >= 17){
+            console.log(`${person.name} can go to The Matrix`)
+        } else if (person.age <= 16){
+            console.log(`${person.name} is under age!!`)
+        }
+    
+    })
+
+    /*for (let i = 0; i < matrixLimit.length; i++){
+        
+        if (matrixLimit[i].age >= 17){
+            console.log(`${matrixLimit[i].name} can go to The Matrix`)
+        } else if (matrixLimit[i].age <= 16){
+            console.log(`${matrixLimit[i].name} is under age!!`)
+        }
+    }*/
+
+}
+
+console.log(matrixMovieLimit(matrixMovieCustomers))
+
   // ["Angelina Jolie can go to The Matrix",
   // "Eric Jones is under age!!",
   // "Paris Hilton is under age!!",
   // "Kayne West is under age!!",
   // "Bob Ziroll can go to The Matrix"]
 
-// Array of names in h1s and ages in h2s
+// 6. Array of names in h1s and ages in h2s
 
-function readyToPutInTheDOM(arr){
-    // your code here
-  }
-  console.log(readyToPutInTheDOM([
-      {
-          name: "Angelina Jolie",
-          age: 80
-      },
-      {
-          name: "Eric Jones",
-          age: 2
-      },
-      {
-          name: "Paris Hilton",
-          age: 5
-      },
-      {
-          name: "Kayne West",
-          age: 16
-      },
-      {
-          name: "Bob Ziroll",
-          age: 100
-      }
-  ]));
+const nameAgeArray = [{
+        name: "Angelina Jolie",
+        age: 80
+    },
+    {
+        name: "Eric Jones",
+        age: 2
+    },
+    {
+        name: "Paris Hilton",
+        age: 5
+    },
+    {
+        name: "Kayne West",
+        age: 16
+    },
+    {
+        name: "Bob Ziroll",
+        age: 100
+    }
+]
+
+
+
+
+function readyToPutInTheDOM(arrayOfNameAges){
+    
+    const names = arrayOfNameAges.map(namesObject =>{
+
+        return "<h1>" + namesObject.name + "</h1>" + "<h2>" + namesObject.age + "</h2>" + ","
+        
+    })
+    
+    return names
+
+}
+
+console.log(readyToPutInTheDOM(nameAgeArray))
+
   // ["<h1>Angelina Jolie</h1><h2>80</h2>",
   // "<h1>Eric Jones</h1><h2>2</h2>",
   // "<h1>Paris Hilton</h1><h2>5</h2>",
